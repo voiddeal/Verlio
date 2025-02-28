@@ -8,12 +8,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  header,
 }: Readonly<{
   children: React.ReactNode
+  header: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="w-full overflow-x-hidden">
+        {header}
+        {children}
+      </body>
     </html>
   )
 }
