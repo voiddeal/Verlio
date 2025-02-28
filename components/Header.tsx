@@ -1,14 +1,6 @@
 "use client"
 
-import {
-  AppBar,
-  Button,
-  Menu,
-  MenuItem,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material"
+import { AppBar, Button, Menu, MenuItem, Stack, Toolbar } from "@mui/material"
 import { useState, useRef, useEffect } from "react"
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 import NavButton from "./nav-button/NavButton"
@@ -22,9 +14,11 @@ export default function Header() {
   const [isNavbarDetached, setIsNavbarDetached] = useState(
     window.scrollY > navbarDetachmentThreshold
   )
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget)
   }
+
   const handleClose = () => {
     setAnchorEl(null)
   }
@@ -37,7 +31,6 @@ export default function Header() {
       // If the user is scrolling up, show the navbar
       setIsNavbarDetached(false)
     }
-    console.log(window.scrollY)
   }
 
   useEffect(() => {
@@ -60,9 +53,7 @@ export default function Header() {
             <Link href="/">Verlio</Link>
           </li>
           <li>
-            <Link href="/" className="shadow-white hover:shadow-lg ">
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="/">Reservations</Link>
