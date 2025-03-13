@@ -1,7 +1,3 @@
-import Image from "next/image"
-import heroBottomImage from "@/public/hero-bottom-image.png"
-import img1 from "@/public/img-1.png"
-import HeroButton from "../hero-button/HeroButton"
 import HeroInfoCards from "../hero-info-cards/HeroInfoCards"
 import Records from "@/components/Records"
 import "./hero.css"
@@ -21,8 +17,14 @@ export default function Hero() {
           priority
         /> */}
         <picture>
-          <source media="(min-width:768px)" srcSet="/hero-image-default.jpg" />
-          <source media="(max-width:768px)" srcSet="/hero-image-cropped.jpg" />
+          <source
+            media="(min-width:768px)"
+            srcSet="/hero/hero-image-default.jpg"
+          />
+          <source
+            media="(max-width:768px)"
+            srcSet="/hero/hero-image-cropped.jpg"
+          />
           <img
             src="/hero-image-default.jpg"
             alt="chef cooking"
@@ -38,17 +40,18 @@ export default function Hero() {
               <br />
               Tells a Story.
             </h1>
-            <p className="text-white text-justify text-[13px] text-opacity-90 drop-shadow-lg shadow-red-600">
-              From Farm to Table. Each Ingredient
-              <br />
-              is Carefully Selected for Unmatched Quality.
+            <p className="text-white text-justify text-[13px] text-opacity-90 drop-shadow-lg shadow-red-600 pl-2">
+              From Farm to Table.
+              {/* Each Ingredient */}
+              {/* <br /> */}
+              {/* is Carefully Selected for Unmatched Quality. */}
             </p>
-            <button
+            {/* <button
               type="button"
               className="text-black bg-yellow-300 px-4 py-2 mt-2"
             >
               Book a Table
-            </button>
+            </button> */}
           </div>
           {/* <div className="flex gap-x-8">
             <HeroButton title="See our Menu" />
