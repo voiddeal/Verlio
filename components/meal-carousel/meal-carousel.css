@@ -1,0 +1,45 @@
+.slick-prev {
+  left: 4% !important;
+  z-index: 1;
+  scale: 3;
+}
+
+.slick-next {
+  right: 4% !important;
+  z-index: 1;
+  scale: 3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(255, 217, 0, 0.7);
+}
+
+/* Custom styles for the dots */
+.custom-dots {
+  display: flex !important;
+  justify-content: center; /* Center the dots horizontally */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.custom-dots li button {
+  width: 40px;
+  height: 5px;
+  border-radius: 10%;
+  background-color: rgb(206, 206, 206);
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.custom-dots li.slick-active button {
+  background-color: rgb(134, 134, 134);
+}
