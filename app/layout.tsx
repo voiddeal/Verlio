@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import AppProviders from "@/providers/AppProviders"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -9,15 +10,20 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   header,
+  footer,
 }: Readonly<{
   children: React.ReactNode
   header: React.ReactNode
+  footer: React.ReactNode
 }>) {
   return (
     <html lang="en">
       <body className="w-full overflow-x-hidden">
-        {header}
-        {children}
+        <AppProviders>
+          {header}
+          {children}
+          {footer}
+        </AppProviders>
       </body>
     </html>
   )
