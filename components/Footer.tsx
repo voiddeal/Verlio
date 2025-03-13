@@ -7,7 +7,7 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-stone-900 text-white relative">
+    <footer className="flex flex-col bg-stone-900 text-white relative mt-16">
       <h4 className="text-3xl text-center mt-10 mb-5">Verlio</h4>
       <p className="text-center w-6/12 m-auto text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
@@ -26,17 +26,28 @@ export default function Footer() {
         </Link>
       </div>
       <div className="w-10/12 m-auto border-t border-b border-neutral-800 flex gap-x-5 justify-center py-2 text-sm">
-        <Link href="#">Contact</Link>
-        <Link href="#">Learn/How-to</Link>
-        <Link href="#">Recipes</Link>
-        <Link href="#">Seasonal Sensations</Link>
+        <Link href="#" className="hover:text-theme-default">
+          Contact
+        </Link>
+        <Link href="#" className="hover:text-theme-default">
+          Learn/How-to
+        </Link>
+        <Link href="#" className="hover:text-theme-default">
+          Recipes
+        </Link>
+        <Link href="#" className="hover:text-theme-default">
+          Seasonal Sensations
+        </Link>
       </div>
       <div className="flex my-4 w-10/12 m-auto text-sm">
         <div className="flex-grow">Verlio 2025 | All Rights Reserved</div>
         <div className="flex gap-x-4">
-          <Link href="#">Term and Conditions</Link>
-          <Link href="#"></Link>
-          Privacy Policy
+          <Link href="#" className="hover:text-theme-dark">
+            Term and Conditions
+          </Link>
+          <Link href="#" className="hover:text-theme-dark">
+            Privacy Policy
+          </Link>
         </div>
       </div>
       {/* Pepper Image */}
