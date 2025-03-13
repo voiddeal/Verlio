@@ -17,8 +17,11 @@
     "@types/react-slick": "^0.23.13",
     "next": "15.1.7",
     "react": "^19.0.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.15.1",
+    "react-redux": "^9.2.0",
     "react-slick": "^0.30.3",
     "sass": "^1.85.1",
     "slick-carousel": "^1.8.1"
