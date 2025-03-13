@@ -13,13 +13,22 @@ export default function Records() {
   })
 
   return (
-    <div className="flex justify-evenly items-center p-3" ref={ref}>
+    <div
+      className="flex justify-evenly items-center p-3 text-white lg:absolute bottom-0 m-auto w-full lg:bg-stone-900 lg:bg-opacity-30 lg:backdrop-blur-[2px]"
+      ref={ref}
+    >
       <div className="flex flex-col justify-center items-center">
         <div>
           <BiSolidHappy className="text-2xl" />
         </div>
         {(inView && (
-          <CountUp start={0} end={1_100_000} suffix="+" duration={4} />
+          <CountUp
+            start={0}
+            end={1_100_000}
+            suffix="+"
+            duration={4}
+            className="text-lg"
+          />
         )) ||
           "0"}
         <div>Satisfied Customers</div>
@@ -29,7 +38,13 @@ export default function Records() {
           <BsFillCartCheckFill className="text-2xl" />
         </div>
         {(inView && (
-          <CountUp start={0} end={12_000} suffix="+" duration={4} />
+          <CountUp
+            start={0}
+            end={12_000}
+            suffix="+"
+            duration={4}
+            className="text-lg"
+          />
         )) ||
           "0"}
         <div>Online Orders</div>
@@ -39,7 +54,13 @@ export default function Records() {
           <MdFoodBank className="text-2xl" />
         </div>
         {(inView && (
-          <CountUp start={0} end={850_000} suffix="+" duration={4} />
+          <CountUp
+            start={0}
+            end={850_000}
+            suffix="+"
+            duration={4}
+            className="text-lg"
+          />
         )) ||
           "0"}
         <div>Served Dinners</div>
