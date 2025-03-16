@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import Menu from "./side-nav/Menu"
+import MenuButton from "./side-nav/MenuButton"
 import { isBrowser } from "@/utils/isBrowser"
 import { IoMenu } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
@@ -22,7 +22,8 @@ export default function Header() {
     const y = window.scrollY
     const topNavHeight = topNav.current?.scrollHeight
 
-    if (y > 100) topNavBG.current!.style.height = `${topNavHeight}px`
+    // if (y > 100) topNavBG.current!.style.height = `${topNavHeight}px`
+    if (y > 100) topNavBG.current!.style.height = "56px"
     else topNavBG.current!.style.height = "0px"
   }
   const handleResize = () => {
@@ -57,7 +58,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="z-50 transition-all relative">
+    <header className="z-50 relative">
       {/* TOP NAV */}
       <nav
         className="fixed w-full flex justify-between items-center"
@@ -65,15 +66,15 @@ export default function Header() {
       >
         <div
           ref={topNavBG}
-          className="absolute bg-[#e4b257] w-full transition-[height] -z-10 self-start"
+          className="absolute bg-[#e4b257] w-full transition-[height] -z-10 self-start duration-300 h-14"
         ></div>
         <div className="px-4 py-2 cursor-pointer" onClick={openSideNav}>
-          <IoMenu color="white" size={40} />
+          <IoMenu className="text-primary-default black" size={40} />
         </div>
         <div className="px-4 py-2 cursor-pointer">
           <Link
             href="/"
-            className="text-stone-100 hover:text-theme-default block text-xl"
+            className="text-stone-100 hover:text-theme-default block text-2xl"
           >
             Verlio
           </Link>
@@ -82,28 +83,28 @@ export default function Header() {
       {/* SIDE NAV */}
       <nav
         ref={sideNav}
-        className={`h-screen flex flex-col bg-theme-blue-light fixed left-0 top-0 transition-all outline-none border-none ${
-          sideNavDisplay === false ? "-translate-x-full" : ""
+        className={`h-screen flex flex-col bg-theme-blue-light fixed left-0 top-0 transition-transform outline-none border-none duration-500 delay-0 -translate-x-full ${
+          sideNavDisplay ? "-translate-x-0" : "-translate-x-full"
         }`}
-        style={sideNavDisplay ? { width: "min(70vw, 400px)" } : undefined}
+        style={{ width: "min(70vw, 400px)" }}
         onBlur={sideNavFocusOutHandler}
         tabIndex={-1}
       >
-        {/* X Button */}
+        {/* SIDE NAV close Button */}
         <div
           className="w-fit flex justify-center items-center ml-auto py-2 cursor-pointer"
           onClick={() => setSideNavDisplay(false)}
         >
           <IoCloseOutline size={40} className=" text-primary-default" />
         </div>
-        {/* Links */}
+        {/* SIDE NAV Links */}
         <ul className="h-full flex flex-col gap-y-4 px-4 py-8 text-2xl font-bold text-primary-default overflow-y-auto">
           <li className="">
             <Link href="/" className="block py-2">
               HOME
             </Link>
           </li>
-          <Menu />
+          <MenuButton />
 
           <li className="">
             <Link href="/" className="block py-2">
