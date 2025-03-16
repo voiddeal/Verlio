@@ -1,0 +1,53 @@
+.cover-layer-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.cover-layer-container.active {
+  animation: below 0.9s 0s forwards;
+}
+
+.cover-layer-container.active::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  animation: above 0.9s 0s ease-out forwards;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes above {
+  0% {
+    background-color: #e2b96b;
+    transform: translateX(-100%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(0);
+  }
+  100% {
+    background-color: #e2b96b;
+    transform: translateX(100%);
+  }
+}
+@keyframes below {
+  0% {
+    background-color: white;
+  }
+  35% {
+    background-color: white;
+  }
+  65% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+} /*# sourceMappingURL=cover-layer-animation.css.map */
