@@ -25,6 +25,7 @@ export default {
             default: "#60d1ff",
           },
         },
+        paper: "#e4b257",
       },
       fontSize: {
         xs: "0.7rem",
