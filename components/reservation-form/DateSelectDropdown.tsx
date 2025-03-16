@@ -1,12 +1,13 @@
 "use client"
 
-import { useAppDispatch } from "@/redux/hooks"
+import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { reservationInfoActions } from "@/redux/slices/reservationInfoSlice"
-import dateFormatter from "@/utils/today"
+import today from "@/utils/today"
 import { IoIosArrowDown } from "react-icons/io"
 
 export default function DateSelectDropdown() {
   const dispatch = useAppDispatch()
+  const { isClosed } = useAppSelector((state) => state.restaurant)
   const generateNextDay = (() => {
     let count = 0
     const daysOfWeek = [
@@ -38,9 +39,12 @@ export default function DateSelectDropdown() {
 
   const dayOptions = new Array(7).fill(null).map((_item, index) => {
     const { date, name } = generateNextDay()
+    const isToday = index === 0
+    const tomorrow = index === 1
+
     return (
-      <option value={date} key={index}>
-        {index === 0 ? "Today" : index === 1 ? "Tomorrow" : name}
+      <option value={date} key={index} disabled={isToday && isClosed}>
+        {isToday ? "Today" : tomorrow ? "Tomorrow" : name}
       </option>
     )
   })
@@ -55,7 +59,7 @@ export default function DateSelectDropdown() {
       <select
         name="reservation-date"
         className="reservation-form-basics"
-        defaultValue={dateFormatter()}
+        defaultValue={today()}
         aria-label="Choose a date"
         onChange={(e) => updateDate(e.currentTarget.value)}
       >
