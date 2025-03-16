@@ -41,8 +41,8 @@ export default function MealPreview({ meal }) {
         <br />
         <span className="text-sm">
           Ingredients:{" "}
-          <span className="text-black text-opacity-70">
-            {ingredients.slice(0, 2).join(", ")}
+          <span className="text-primary-light">
+            {ingredients.slice(0, 3).join(", ")}
           </span>
         </span>
       </div>
