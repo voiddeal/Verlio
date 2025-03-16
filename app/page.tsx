@@ -6,7 +6,7 @@ import Blogs from "@/components/Blogs"
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Hero />
       <EatOurFood />
       <FeaturedMeals />
