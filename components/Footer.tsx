@@ -7,7 +7,8 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-stone-900 text-white relative mt-16">
+    <footer className="flex flex-col bg-stone-900 text-white relative">
+      <div className="w-full h-20 bg-[url('/line-break-1.png')] bg-contain bg-center z-50 mt-10 mb-5"></div>
       <h4 className="text-3xl text-center mt-10 mb-5">Verlio</h4>
       <p className="text-center w-6/12 m-auto text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
@@ -56,7 +57,7 @@ export default function Footer() {
         width={100}
         height={100}
         alt="chili pepper"
-        className="absolute -rotate-[90deg] top-[-18%] right-14 scale-y-[-1]"
+        className="absolute -rotate-[90deg] top-[-13%] right-14 scale-y-[-1]"
       />
     </footer>
   )
