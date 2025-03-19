@@ -1,8 +1,8 @@
 import Image from "next/image"
-import person from "@/public/woman-eating.jpg"
-import pic1 from "@/public/food-pic-2.jpg"
-import pic2 from "@/public/food-pic-4.jpg"
-import pic3 from "@/public/food-pic-5.jpg"
+import person from "@/public/gallery/woman-eating.jpg"
+import pic1 from "@/public/gallery/food-pic-2.jpg"
+import pic2 from "@/public/gallery/food-pic-4.jpg"
+import pic3 from "@/public/gallery/food-pic-5.jpg"
 
 export default function Gallery() {
   return (
