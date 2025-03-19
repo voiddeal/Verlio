@@ -6,12 +6,30 @@ interface ReservationInfo {
   party: string
   date: string
   hour: string | undefined
+  fname: string | undefined
+  lname: string | undefined
+  tel: string | undefined
+  email: string | undefined
+  request: string | undefined
+  occasion:
+    | "none"
+    | "birthday"
+    | "date"
+    | "anniversary"
+    | "special-occasion"
+    | "business-meal"
 }
 
 const initialState: ReservationInfo = {
   party: "2",
   date: today(),
   hour: undefined,
+  fname: undefined,
+  lname: undefined,
+  tel: undefined,
+  email: undefined,
+  request: undefined,
+  occasion: "none",
 }
 
 export const reservationInfoSlice = createSlice({
@@ -29,6 +47,27 @@ export const reservationInfoSlice = createSlice({
     },
     resetHour: (state) => {
       state.hour = ""
+    },
+    setFname: (state, action: PayloadAction<ReservationInfo["fname"]>) => {
+      state.fname = action.payload
+    },
+    setLname: (state, action: PayloadAction<ReservationInfo["lname"]>) => {
+      state.lname = action.payload
+    },
+    setTel: (state, action: PayloadAction<ReservationInfo["tel"]>) => {
+      state.tel = action.payload
+    },
+    setEmail: (state, action: PayloadAction<ReservationInfo["email"]>) => {
+      state.email = action.payload
+    },
+    setRequest: (state, action: PayloadAction<ReservationInfo["request"]>) => {
+      state.request = action.payload
+    },
+    setOccasion: (
+      state,
+      action: PayloadAction<ReservationInfo["occasion"]>
+    ) => {
+      state.occasion = action.payload
     },
   },
 })
