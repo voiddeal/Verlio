@@ -23,6 +23,7 @@ export default {
           blue: {
             light: "#94e0ff",
             default: "#60d1ff",
+            dark: "#29c1ffcc",
           },
         },
         paper: "#e4b257",
