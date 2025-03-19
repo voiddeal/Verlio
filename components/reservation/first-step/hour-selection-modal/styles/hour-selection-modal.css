@@ -1,0 +1,27 @@
+.hour-selection-modal-list {
+  @apply w-9/12 mt-auto bg-theme-blue-default bg-opacity-70 rounded-ss-xl rounded-se-xl text-white  text-center;
+}
+
+.hour-selection-modal-list::before,
+.hour-selection-modal-list::after {
+  @apply block w-full h-5 bg-theme-blue-dark;
+  content: "";
+  border-radius: inherit;
+}
+
+.hour-selection-modal-list::after {
+  @apply h-10;
+}
+
+.hour-selection-modal-list {
+  animation: appear 0.5s ease-out forwards;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=hour-selection-modal.css.map */
