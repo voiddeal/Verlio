@@ -1,37 +1,16 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
-import MenuButton from "./side-nav/MenuButton"
-import { isBrowser } from "@/utils/isBrowser"
+import MenuButton from "./MenuButton"
 import { IoMenu } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
 
+import TopNavBG from "./TopNavBG"
+
 export default function Header() {
-  const topNav = useRef<HTMLElement>(null)
   const sideNav = useRef<HTMLElement>(null)
-  const topNavBG = useRef<HTMLDivElement>(null)
-  const viewWidth = useRef<number>(isBrowser() ? window.innerWidth : 0)
   const [sideNavDisplay, setSideNavDisplay] = useState(false)
-  const CTA_DISPLAY_WIDTH_THRESHOLD: number = 768
-  const shouldShowNavbarCTA = useRef<boolean>(
-    isBrowser() && viewWidth.current > CTA_DISPLAY_WIDTH_THRESHOLD
-  )
-
-  const handleScroll = () => {
-    const y = window.scrollY
-    const topNavHeight = topNav.current?.scrollHeight
-
-    // if (y > 100) topNavBG.current!.style.height = `${topNavHeight}px`
-    if (y > 100) topNavBG.current!.style.height = "56px"
-    else topNavBG.current!.style.height = "0px"
-  }
-  const handleResize = () => {
-    if (!window) return
-    viewWidth.current = window.innerWidth
-    shouldShowNavbarCTA.current =
-      viewWidth.current > CTA_DISPLAY_WIDTH_THRESHOLD
-  }
 
   const sideNavFocusOutHandler = (
     event: React.FocusEvent<HTMLElement, Element>
@@ -47,43 +26,19 @@ export default function Header() {
     setTimeout(() => sideNav.current?.focus(), 0)
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
-
   return (
-    <header className="z-50 relative">
+    <header className="z-40 relative">
       {/* TOP NAV */}
-      <nav
-        className="fixed w-full flex justify-between items-center"
-        ref={topNav}
-      >
-        <div
-          ref={topNavBG}
-          className="absolute bg-[#e4b257] w-full transition-[height] -z-10 self-start duration-300 h-14"
-        ></div>
+      <nav className="fixed w-full">
+        <TopNavBG />
         <div className="px-4 py-2 cursor-pointer" onClick={openSideNav}>
-          <IoMenu className="text-primary-default black" size={40} />
-        </div>
-        <div className="px-4 py-2 cursor-pointer">
-          <Link
-            href="/"
-            className="text-stone-100 hover:text-theme-default block text-2xl"
-          >
-            Verlio
-          </Link>
+          <IoMenu className="text-white" size={40} />
         </div>
       </nav>
       {/* SIDE NAV */}
       <nav
         ref={sideNav}
-        className={`h-screen flex flex-col bg-theme-blue-light fixed left-0 top-0 transition-transform outline-none border-none duration-500 delay-0 -translate-x-full ${
+        className={`absolute left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-500 delay-0 ${
           sideNavDisplay ? "-translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "min(70vw, 400px)" }}
