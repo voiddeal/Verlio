@@ -8,7 +8,7 @@ export default function HourSelectButton() {
   const dispatch = useAppDispatch()
   const { hour } = useAppSelector((state) => state.reservationInfo)
   const openHourSelectionModal = () => {
-    dispatch(appActions.setIsHourModalOpen(true))
+    dispatch(appActions.setShouldHourModalOpen(true))
   }
 
   return (

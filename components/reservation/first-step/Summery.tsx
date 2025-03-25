@@ -5,7 +5,7 @@ import { GoPerson } from "react-icons/go"
 import { CiCalendar } from "react-icons/ci"
 import { useAppSelector } from "@/redux/hooks"
 
-export default function ReservationFirstStepSummery() {
+export default function Summery() {
   const { date, hour, party } = useAppSelector((state) => state.reservationInfo)
   const display = date.split(" | ")[1]
 

@@ -1,5 +1,5 @@
 .reservation-form-basics-container {
-  @apply flex bg-theme-green-light;
+  @apply flex bg-theme-green-light cursor-pointer;
 
   &.required {
     @apply bg-red-300;
@@ -11,10 +11,12 @@
   padding-inline: min(5vw, 4em);
   padding-block: 2dvw;
   font-size: clamp(1.1rem, 3dvw, 2.2rem);
+  cursor: inherit;
 }
 
 .reservation-form-dropdown-arrow-container {
   @apply flex justify-center items-center text-primary-default;
+  cursor: inherit;
 }
 
 .reservation-form-basics > option {

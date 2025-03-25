@@ -1,29 +1,15 @@
 "use client"
 
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
-import { reservationInfoActions } from "@/redux/slices/reservationInfoSlice"
+import { appActions } from "@/redux/slices/appSlice"
 
-interface Props {
-  secondStep: React.RefObject<HTMLDivElement | null>
-}
-
-export default function FirstStepProceedButton({ secondStep }: Props) {
+export default function ProceedButton() {
   const { hour } = useAppSelector((state) => state.reservationInfo)
   const dispatch = useAppDispatch()
 
   const goToSecondStep = () => {
-    if (secondStep.current) {
-      secondStep.current.scrollIntoView({
-        behavior: "smooth",
-      })
-      setTimeout(() => {
-        window.scrollBy({
-          top: -60,
-          behavior: "smooth",
-        })
-      }, 0)
-    }
-    dispatch(reservationInfoActions.setCurrentStep("2"))
+    document.getElementById("reservation-second-step")?.scrollIntoView()
+    dispatch(appActions.setCurrentReservationStep(2))
   }
 
   return (
@@ -32,6 +18,7 @@ export default function FirstStepProceedButton({ secondStep }: Props) {
         className="block w-fit m-auto py-2 px-14 text-lg bg-theme-blue-default hover:bg-theme-blue-light cursor-pointer disabled:hover:cursor-not-allowed disabled:bg-slate-600 transition-colors text-primary-default"
         onClick={goToSecondStep}
         disabled={!hour}
+        tabIndex={!hour ? 0 : -1}
       >
         {hour ? "Proceed" : "Please select an hour"}
       </button>
