@@ -1,61 +1,20 @@
-"use client"
-
-import { useAppDispatch, useAppSelector } from "@/redux/hooks"
-import { CiLock } from "react-icons/ci"
 import CountdownTimer from "@/components/CountdownTimer"
+import Form from "./Form"
+import BackToFirstStepButton from "./BackToFirstStepButton"
+import LockOverlay from "../LockOverlay"
 import { FaArrowTurnUp } from "react-icons/fa6"
-import { reservationInfoActions } from "@/redux/slices/reservationInfoSlice"
-import ReservationSecondStepForm from "./ReservationSecondStepForm"
 
-interface Props {
-  ref: React.RefObject<HTMLDivElement | null>
-  firstStep: React.RefObject<HTMLDivElement | null>
-}
-
-export default function ReservationSecondStep({ ref, firstStep }: Props) {
-  const { currentStep } = useAppSelector((state) => state.reservationInfo)
-  const dispatch = useAppDispatch()
-
-  const backToFirstStep = () => {
-    if (firstStep.current) {
-      firstStep.current.scrollIntoView({
-        behavior: "smooth",
-      })
-      setTimeout(() => {
-        window.scrollBy({
-          top: -60,
-          behavior: "smooth",
-        })
-      }, 0)
-    }
-    dispatch(reservationInfoActions.setCurrentStep("1"))
-  }
-
+export default function SecondStep() {
   return (
-    <div className="relative my-4" ref={ref}>
-      {/* Lock overaly */}
-      <div
-        className={
-          currentStep === "2"
-            ? "hidden"
-            : "absolute w-full h-full bg-black bg-opacity-60 backdrop-blur-[2px] text-center text-white text-lg z-10"
-        }
-      >
-        <CiLock className="inline-block m-auto size-28 mt-10" />
-      </div>
-      <button
-        className="flex justify-center items-center w-fit m-auto py-2 px-14 text-lg bg-theme-blue-default hover:bg-theme-blue-light cursor-pointer disabled:hover:cursor-not-allowed disabled:bg-slate-600 transition-colors text-primary-default"
-        onClick={backToFirstStep}
-      >
-        <span className="pr-4">Back to Date & Time</span>
-        <FaArrowTurnUp className="inline" />
-      </button>
+    <div className="relative my-4" id="reservation-second-step">
+      <LockOverlay originStep={2} />
+      <BackToFirstStepButton />
       <div className="bg-sky-100 py-2 my-4 text-center">
         <p>
           Due to limited availability, we can hold a table for you for 5
           minutes.
         </p>
-        {currentStep === "2" ? <CountdownTimer /> : null}
+        <CountdownTimer />
       </div>
       <div className="py-6">
         <h4 className="text-xl py-4 font-semibold">
@@ -79,6 +38,16 @@ export default function ReservationSecondStep({ ref, firstStep }: Props) {
             to 2; 2 hours for parties of up to 4; and 2 hours 30 minutes for
             parties of 5+.
           </p>
+          <br />
+          <p>
+            Please let us know of any allergies or dietary requirements at time
+            of booking.
+          </p>
+          <br />
+          <p>
+            Should you wish to speak to our reservation team please call daily
+            between 9am - 5pm.
+          </p>
         </div>
         <br />
         <div>
@@ -93,7 +62,7 @@ export default function ReservationSecondStep({ ref, firstStep }: Props) {
       <h3 id="reservation-form-second-step" className="py-2 text-xl font-bold">
         2. Your Details
       </h3>
-      <ReservationSecondStepForm />
+      <Form />
       <p className="text-sm">
         By selecting “Confirm Reservation” you are agreeing to the terms and
         conditions of the Verlio User Agreement and Privacy Policy.
