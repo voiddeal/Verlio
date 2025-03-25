@@ -1,75 +1,41 @@
 import HeroInfoCards from "../hero-info-cards/HeroInfoCards"
-import Records from "@/components/Records"
-import "./hero.css"
+import Image from "next/image"
 
 export default function Hero() {
   return (
     <div className="relative bg-black h-full">
-      <div className="hero-image-container relative">
-        {/* <Image
+      {/* Hero Image */}
+      <div className="relative w-dvw h-dvh">
+        <Image
           id="hero-img"
-          src={heroImage}
+          // src="/hero/hero-image-default.jpg"
+          src="/hero/hero-image.jpg"
           width={1920}
           height={1080}
           quality={100}
           alt="hero-image"
-          className="grayscale-[50%] opacity-50"
+          className="grayscale-[30%] w-full h-full object-cover "
           priority
-        /> */}
-        <picture>
-          <source
-            media="(min-width:768px)"
-            srcSet="/hero/hero-image-default.jpg"
-          />
-          <source
-            media="(max-width:768px)"
-            srcSet="/hero/hero-image-cropped.jpg"
-          />
-          <img
-            src="/hero-image-default.jpg"
-            alt="chef cooking"
-            className="grayscale-[50%] opacity-50"
-          />
-        </picture>
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent opacity-80"></div>
       </div>
-      <div className="absolute w-full h-full top-0 md:flex justify-between px-20 py-10">
-        <div className="flex flex-col items-center md:items-[unset]">
-          <div>
-            <h1 className="w-full text-5xl lg:text-8xl md:text-8xl sm:text-6xl text-yellow-300">
-              Every Flavor,
-              <br />
-              Tells a Story.
-            </h1>
-            <p className="text-white text-justify text-[13px] text-opacity-90 drop-shadow-lg shadow-red-600 pl-2">
-              From Farm to Table.
-              {/* Each Ingredient */}
-              {/* <br /> */}
-              {/* is Carefully Selected for Unmatched Quality. */}
-            </p>
-            {/* <button
-              type="button"
-              className="text-black bg-yellow-300 px-4 py-2 mt-2"
-            >
-              Book a Table
-            </button> */}
-          </div>
-          {/* <div className="flex gap-x-8">
-            <HeroButton title="See our Menu" />
-            <HeroButton title="Book a Table" />
-          </div> */}
-        </div>
+      <div className="absolute w-full h-full top-0 md:flex justify-between">
+        <h1 className="w-fit m-auto mt-[13dvh] text-white">
+          <span className="text-[10rem] leading-[11rem] monsieur-la-doulaise-regular">
+            Verlio
+          </span>
+          <br />
+          <span className="text-2xl leading-none capitalize">RESTAURANT</span>
+        </h1>
         <HeroInfoCards />
       </div>
-      <Records />
-      {/* <div className="overflow-hidden w-full">
-        <Image
-          src={img1}
-          width={1920}
-          quality={100}
-          alt="hero-image"
-          className=" scale-x-150 opacity-80 grayscale"
-        />
-      </div> */}
+      {/* <Image
+        src={"/verlio.png"}
+        width={500}
+        height={500}
+        alt="verlio logo"
+        className="w-32 absolute bottom-0 right-0 m-2"
+      /> */}
     </div>
   )
 }
