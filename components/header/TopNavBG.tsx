@@ -1,8 +1,8 @@
-import scrollYTracker from "@/utils/scrollYTracker"
+import useScrollTracker from "@/utils/useScrollTracker"
 import Link from "next/link"
 
 export default function TopNavBG() {
-  const y = scrollYTracker()
+  const y = useScrollTracker()
 
   return (
     <div

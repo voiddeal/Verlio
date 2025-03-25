@@ -31,14 +31,14 @@ export default function Header() {
       {/* TOP NAV */}
       <nav className="fixed w-full">
         <TopNavBG />
-        <div className="px-4 py-2 cursor-pointer" onClick={openSideNav}>
+        <div className="w-fit px-4 py-2 cursor-pointer" onClick={openSideNav}>
           <IoMenu className="text-white" size={40} />
         </div>
       </nav>
       {/* SIDE NAV */}
       <nav
         ref={sideNav}
-        className={`absolute left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-500 delay-0 ${
+        className={`fixed left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-500 delay-0 ${
           sideNavDisplay ? "-translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "min(70vw, 400px)" }}
