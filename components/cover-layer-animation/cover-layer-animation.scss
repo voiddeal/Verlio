@@ -1,4 +1,10 @@
-$duration: 0.9s;
+/*
+follow: two-step sliding cover; comes in and takes the full width and then leaves from the opposite side.
+no-follow- a simple one-step sliding cover, revealing the content beneath. 
+ */
+
+$duration-follow: 0.8s;
+$duration-no-follow: 0.6s;
 $delay: 0s;
 $belowColor: #fff;
 $coverColor: #e2b96b;
@@ -8,24 +14,81 @@ $coverColor: #e2b96b;
   width: 100%;
   height: 100%;
   z-index: 10;
+  overflow: hidden;
+}
+
+.cover-layer {
+  width: inherit;
+  height: inherit;
   background-color: $belowColor;
 }
 
-.cover-layer-container.active {
-  animation: below $duration $delay forwards;
+.cover-layer.active.follow {
+  animation: below-follow $duration-follow $delay forwards;
 }
 
-.cover-layer-container.active::after {
+.cover-layer.active.no-follow {
+  background-color: unset;
+}
+
+.cover-layer.active::after {
   content: "";
   position: absolute;
   height: 100%;
-  animation: above $duration $delay ease-out forwards;
-  background-color: inherit;
   width: 100%;
   height: 100%;
 }
 
-@keyframes above {
+.cover-layer.active.to-left.follow::after {
+  animation: to-left-follow $duration-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-right.follow::after {
+  animation: to-right-follow $duration-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-bottom.follow::after {
+  animation: to-bottom-follow $duration-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-top.follow::after {
+  animation: to-top-follow $duration-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-left::after {
+  animation: to-left $duration-no-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-right::after {
+  animation: to-right $duration-no-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-bottom::after {
+  animation: to-bottom $duration-no-follow $delay ease-out forwards;
+}
+
+.cover-layer.active.to-top::after {
+  animation: to-top $duration-no-follow $delay ease-out forwards;
+}
+
+@keyframes to-left-follow {
+  0% {
+    background-color: $coverColor;
+    transform: translateX(100%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(0);
+  }
+  100% {
+    background-color: $coverColor;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes to-right-follow {
   0% {
     background-color: $coverColor;
     transform: translateX(-100%);
@@ -42,12 +105,90 @@ $coverColor: #e2b96b;
   }
 }
 
-@keyframes below {
+@keyframes to-bottom-follow {
   0% {
-    background-color: white;
+    background-color: $coverColor;
+    transform: translateY(-100%);
   }
   35% {
-    background-color: white;
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(0);
+  }
+  100% {
+    background-color: $coverColor;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes to-top-follow {
+  0% {
+    background-color: $coverColor;
+    transform: translateY(100%);
+  }
+  35% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(0);
+  }
+  100% {
+    background-color: $coverColor;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes to-left {
+  from {
+    background-color: $belowColor;
+    transform: translateX(0);
+  }
+  to {
+    background-color: $belowColor;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes to-right {
+  from {
+    background-color: $belowColor;
+    transform: translateX(0);
+  }
+  to {
+    background-color: $belowColor;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes to-bottom {
+  from {
+    background-color: $belowColor;
+    transform: translateY(0);
+  }
+  to {
+    background-color: $belowColor;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes to-top {
+  from {
+    background-color: $belowColor;
+    transform: translateY(0);
+  }
+  to {
+    background-color: $belowColor;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes below-follow {
+  0% {
+    background-color: $belowColor;
+  }
+  35% {
+    background-color: $belowColor;
   }
   65% {
     background-color: transparent;
@@ -56,30 +197,3 @@ $coverColor: #e2b96b;
     background-color: transparent;
   }
 }
-
-// @keyframes above {
-//   0% {
-//     left: 0;
-//     width: 0;
-//   }
-
-//   49% {
-//     left: 0;
-//     width: 100%;
-//   }
-
-//   50% {
-//     right: 0;
-//     width: 100%;
-//   }
-
-//   99% {
-//     right: 0;
-//     width: 50%;
-//   }
-
-//   100% {
-//     right: 0;
-//     width: 50%;
-//   }
-// }
