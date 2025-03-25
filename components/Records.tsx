@@ -14,7 +14,7 @@ export default function Records() {
 
   return (
     <div
-      className="flex justify-evenly items-center p-3 text-white lg:absolute bottom-0 m-auto w-full lg:bg-stone-900 lg:bg-opacity-30 lg:backdrop-blur-[2px]"
+      className="lg:w-9/12 lg:mx-auto w-full flex justify-evenly md:justify-center md:gap-x-10  items-center py-8 text-white bg-gray-900"
       ref={ref}
     >
       <div className="flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ export default function Records() {
           />
         )) ||
           "0"}
-        <div>Satisfied Customers</div>
+        <small>Satisfied Customers</small>
       </div>
       <div className="flex flex-col justify-center items-center">
         <div>
@@ -47,7 +47,7 @@ export default function Records() {
           />
         )) ||
           "0"}
-        <div>Online Orders</div>
+        <small>Online Orders</small>
       </div>
       <div className="flex flex-col justify-center items-center">
         <div>
@@ -63,7 +63,7 @@ export default function Records() {
           />
         )) ||
           "0"}
-        <div>Served Dinners</div>
+        <small>Served Dinners</small>
       </div>
     </div>
   )
