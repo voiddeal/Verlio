@@ -1,14 +1,22 @@
+"use client"
+
+interface useGenerateHourOptionsResults {
+  content: string
+  selected?: boolean
+}
+
 import today from "@/utils/today"
 import { appActions } from "@/redux/slices/appSlice"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 
-export default function useGenerateHourOptions() {
+export default function useGenerateHourOptions(): useGenerateHourOptionsResults[] {
   const dispatch = useAppDispatch()
+  const { hour: hourState } = useAppSelector((state) => state.reservationInfo)
   const { date } = useAppSelector((state) => state.reservationInfo)
   const now = new Date(
     new Date().toLocaleString("en-US", { timeZone: "America/Vancouver" })
   )
-  const options = []
+  const options: useGenerateHourOptionsResults[] = []
   const isToday = date === today() // Check if reservation is for today
   const openHour = 12 // Restaurant opens at 12 PM
   const closeHour = 22 // Restaurant closes at 10 PM
@@ -51,16 +59,19 @@ export default function useGenerateHourOptions() {
 
       const hour12 = hour % 12 === 0 ? 12 : hour % 12 // Convert to 12-hour format
       const period = hour < 12 ? "AM" : "PM"
+      const content = `${hour12}:${minutes
+        .toString()
+        .padStart(2, "0")} ${period}`
 
-      const time = `${hour12}:${minutes.toString().padStart(2, "0")} ${period}`
-      options.push(time)
+      const item = { content, selected: hourState === content }
+      options.push(item)
     }
   }
 
   // Handle case when no options are available
   if (!options.length) {
     dispatch(appActions.setIsClosed(true))
-    options.push("We're closed")
+    options.push({ content: "We're closed" })
   }
 
   return options
