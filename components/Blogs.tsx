@@ -42,16 +42,16 @@ export default function Blogs() {
         <div className="w-full md:w-[40%] flex md:flex-col justify-center md:justify-between gap-x-2">
           <Link
             href="#"
-            className="flex-1 md:flex-initial flex flex-col md:flex-row justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
+            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
           >
             <Image
               src={shakshuka}
-              width={120}
-              height={120}
+              width={230}
+              height={230}
               alt="blog preview image"
-              className="rounded-xl"
+              className="rounded-xl w-full md:w-2/5"
             />
-            <div className="w-full md:w-[60%] flex-1 flex flex-col">
+            <div className="w-full md:w-[60%] flex flex-col">
               <span className="text-xs text-primary-light">
                 November 16, 2022
               </span>
@@ -64,16 +64,16 @@ export default function Blogs() {
           </Link>
           <Link
             href="#"
-            className="flex-1 md:flex-initial flex flex-col md:flex-row justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
+            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
           >
             <Image
               src={ratatouille}
-              width={120}
-              height={120}
+              width={230}
+              height={230}
               alt="blog preview image"
-              className="rounded-xl flex-1"
+              className="rounded-xl w-full md:w-2/5"
             />
-            <div className="w-full md:w-[60%] flex-1 flex flex-col">
+            <div className="w-full md:w-[60%] flex flex-col">
               <span className="text-xs text-primary-light">
                 November 16, 2022
               </span>
@@ -85,16 +85,16 @@ export default function Blogs() {
           </Link>
           <Link
             href="#"
-            className="flex-1 md:flex-initial sm:flex flex-col md:flex-row justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4 hidden"
+            className="flex-1 md:flex-initial sm:flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4 hidden"
           >
             <Image
               src={fajita}
-              width={120}
-              height={120}
+              width={230}
+              height={230}
               alt="blog preview image"
-              className="rounded-xl flex-1"
+              className="rounded-xl w-full md:w-2/5"
             />
-            <div className="w-full md:w-[60%] flex-1 flex flex-col">
+            <div className="w-full md:w-[60%] flex flex-col">
               <span className="text-xs text-primary-light">
                 November 16, 2022
               </span>
