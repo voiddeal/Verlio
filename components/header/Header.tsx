@@ -38,7 +38,7 @@ export default function Header() {
       {/* SIDE NAV */}
       <nav
         ref={sideNav}
-        className={`fixed left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-500 delay-0 ${
+        className={`fixed left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-[400ms] ease-out delay-0 ${
           sideNavDisplay ? "-translate-x-0" : "-translate-x-full"
         }`}
         style={{ width: "min(70vw, 400px)" }}
