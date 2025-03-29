@@ -102,6 +102,7 @@ $coverColor: #e2b96b;
   100% {
     background-color: $coverColor;
     transform: translateX(100%);
+    display: none;
   }
 }
 
@@ -195,5 +196,6 @@ $coverColor: #e2b96b;
   }
   100% {
     background-color: transparent;
+    display: none;
   }
 }

@@ -4,22 +4,27 @@ import { useInView } from "react-intersection-observer"
 import { useState } from "react"
 import "./cover-layer-animation.css"
 
+/* 
+apply the CoverLayer as a direct child of a container element.
+the container element must be position: relative;
+*/
+
 interface Props {
-  to: "left" | "right" | "top" | "bottom"
+  to?: "left" | "right" | "top" | "bottom"
   follow?: boolean
 }
 
 export default function CoverLayer({ to = "right", follow = false }: Props) {
   const [isInView, setIsInView] = useState(false)
-  const threshold = [0, 0.4]
+  const threshold = [0, 0.5]
   const { ref } = useInView({
-    threshold, // Observe multiple thresholds
+    threshold,
     triggerOnce: false,
     onChange: (inView, entry) => {
       if (inView && entry.intersectionRatio >= threshold[1]) {
-        setIsInView(true) // Element enters at 70% visibility
+        setIsInView(true)
       } else if (!inView && entry.intersectionRatio <= threshold[0]) {
-        setIsInView(false) // Element exits at 25% visibility
+        setIsInView(false)
       }
     },
   })

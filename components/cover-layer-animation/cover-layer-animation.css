@@ -94,6 +94,7 @@ no-follow- a simple one-step sliding cover, revealing the content beneath.
   100% {
     background-color: #e2b96b;
     transform: translateX(100%);
+    display: none;
   }
 }
 @keyframes to-bottom-follow {
@@ -180,5 +181,6 @@ no-follow- a simple one-step sliding cover, revealing the content beneath.
   }
   100% {
     background-color: transparent;
+    display: none;
   }
 }/*# sourceMappingURL=cover-layer-animation.css.map */
