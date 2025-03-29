@@ -27,6 +27,7 @@ export default {
           },
         },
         paper: "#e4b257",
+        orange: "#e93f1e",
       },
       fontSize: {
         xs: "0.7rem",
