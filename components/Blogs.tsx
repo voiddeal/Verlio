@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function Blogs() {
   return (
-    <section className="py-5 flex flex-col justify-center itm">
+    <section className="py-5 flex flex-col justify-center w-11/12 sm:w-5/6 md:w-2/3 mx-auto">
       {/* Blog Header */}
       <div className="flex justify-between px-5">
         <h4>Recipe Blogs</h4>
@@ -39,10 +39,10 @@ export default function Blogs() {
           </div>
         </Link>
         {/* Posts */}
-        <div className="w-full md:w-[40%] flex md:flex-col justify-center md:justify-between gap-x-2">
+        <div className="w-full md:w-[40%] flex md:flex-col justify-center md:justify-start gap-x-2">
           <Link
             href="#"
-            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
+            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 rounded-md p-4"
           >
             <Image
               src={shakshuka}
@@ -64,7 +64,7 @@ export default function Blogs() {
           </Link>
           <Link
             href="#"
-            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4"
+            className="flex-1 md:flex-initial flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 rounded-md p-4"
           >
             <Image
               src={ratatouille}
@@ -85,7 +85,7 @@ export default function Blogs() {
           </Link>
           <Link
             href="#"
-            className="flex-1 md:flex-initial sm:flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 bg-theme-blue-light rounded-md p-4 hidden"
+            className="flex-1 md:flex-initial sm:flex flex-col md:flex-row md:justify-center items-center gap-y-1 md:gap-y-0 md:gap-x-2 rounded-md p-4 hidden"
           >
             <Image
               src={fajita}
