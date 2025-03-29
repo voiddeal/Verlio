@@ -8,7 +8,8 @@ import Image from "next/image"
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-stone-900 text-white relative">
-      <div className="w-full h-20 bg-[url('/line-break-1.png')] bg-contain bg-center z-50 mt-10 mb-5"></div>
+      {/* top image */}
+      <div className="w-full h-20 bg-[url('/linebreak-1.png')] bg-contain bg-center mt-10 mb-5"></div>
       <h4 className="text-3xl text-center mt-10 mb-5">Verlio</h4>
       <p className="text-center w-6/12 m-auto text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
