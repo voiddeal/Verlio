@@ -5,7 +5,6 @@ import Link from "next/link"
 import MenuButton from "./MenuButton"
 import { IoMenu } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
-
 import TopNavBG from "./TopNavBG"
 
 export default function Header() {
@@ -29,7 +28,7 @@ export default function Header() {
   return (
     <header className="z-40 relative">
       {/* TOP NAV */}
-      <nav className="fixed w-full">
+      <nav className="fixed w-dvw">
         <TopNavBG />
         <div className="w-fit px-4 py-2 cursor-pointer" onClick={openSideNav}>
           <IoMenu className="text-white" size={40} />
@@ -41,7 +40,7 @@ export default function Header() {
         className={`fixed left-0 top-0 h-dvh flex flex-col bg-theme-blue-light transition-transform outline-none border-none duration-[400ms] ease-out delay-0 ${
           sideNavDisplay ? "-translate-x-0" : "-translate-x-full"
         }`}
-        style={{ width: "min(70vw, 400px)" }}
+        style={{ width: "min(70dvw, 400px)" }}
         onBlur={sideNavFocusOutHandler}
         tabIndex={-1}
       >
@@ -55,24 +54,40 @@ export default function Header() {
         {/* SIDE NAV Links */}
         <ul className="h-full flex flex-col gap-y-4 px-4 py-8 text-2xl font-bold text-primary-default overflow-y-auto">
           <li className="">
-            <Link href="/" className="block py-2">
+            <Link
+              href="/"
+              className="block py-2"
+              onClick={() => setSideNavDisplay(false)}
+            >
               HOME
             </Link>
           </li>
-          <MenuButton />
+          <MenuButton closeSideNav={() => setSideNavDisplay(false)} />
 
           <li className="">
-            <Link href="/" className="block py-2">
+            <Link
+              href="/"
+              className="block py-2"
+              onClick={() => setSideNavDisplay(false)}
+            >
               HOURS + LOCATION
             </Link>
           </li>
           <li className="">
-            <Link href="/" className="block py-2">
+            <Link
+              href="/"
+              className="block py-2"
+              onClick={() => setSideNavDisplay(false)}
+            >
               ABOUT
             </Link>
           </li>
           <li className="">
-            <Link href="/" className="block py-2">
+            <Link
+              href="/"
+              className="block py-2"
+              onClick={() => setSideNavDisplay(false)}
+            >
               GALLERY
             </Link>
           </li>
@@ -80,14 +95,16 @@ export default function Header() {
             <Link
               href="/"
               className="block py-3 transition-colors bg-theme-green-light text-primary-default hover:bg-theme-green-default text-center"
+              onClick={() => setSideNavDisplay(false)}
             >
               TAKEOUT
             </Link>
           </li>
           <li className="">
             <Link
-              href="/"
+              href="/reservation"
               className="block py-3 transition-colors bg-theme-green-light hover:bg-theme-green-default text-center"
+              onClick={() => setSideNavDisplay(false)}
             >
               RESERVE
             </Link>
