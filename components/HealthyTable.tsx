@@ -3,7 +3,6 @@ import person from "@/public/gallery/woman-eating.jpg"
 import pic1 from "@/public/gallery/food-pic-2.jpg"
 import pic2 from "@/public/gallery/food-pic-4.jpg"
 import pic3 from "@/public/gallery/food-pic-5.jpg"
-import CoverLayer from "./cover-layer-animation/CoverLayerAnimation"
 
 export default function HealthyTable() {
   const attention = "border-b-2 border-b-theme-green-light"
@@ -20,9 +19,13 @@ export default function HealthyTable() {
               <br />
               Our commitment to quality means using only the{" "}
               <span className={attention}>finest</span>, responsibly sourced
-              ingredients, prepared to perfection. With every bite, you'll taste
-              our <span className={attention}>dedication</span> to serving
-              wholesome, nourishing dishes that elevate your dining experience.
+              ingredients, prepared to perfection.
+              <br />
+              With every bite, you'll taste our{" "}
+              <span className={attention}>dedication</span> to serving
+              wholesome, nourishing dishes
+              <br />
+              that elevate your dining experience.
               <br />
               <span>
                 Now, <span className={attention}>healthier</span> choices have a
