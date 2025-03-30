@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Freja Charles",
+    "role": "Pastry Chef",
+    "img": "/chefs/freja-charles.jpg",
+    "socials": {
+      "twitter": null,
+      "instagram": null,
+      "facebook": null,
+      "linkedin": null
+    }
+  },
+  {
+    "name": "Hiroshi Tanaka",
+    "role": "Executive Chef",
+    "img": "/chefs/hiroshi-tanaka.jpg",
+    "socials": {
+      "twitter": null,
+      "instagram": null,
+      "facebook": null,
+      "linkedin": null
+    }
+  },
+  {
+    "name": "Carson Witherspoon",
+    "role": "Sous Chef",
+    "img": "/chefs/carson-witherspoon.jpg",
+    "socials": {
+      "twitter": null,
+      "instagram": null,
+      "facebook": null,
+      "linkedin": null
+    }
+  }
+]
