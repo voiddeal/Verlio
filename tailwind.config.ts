@@ -33,13 +33,13 @@ export default {
         xs: "0.7rem",
       },
     },
-    screens: {
-      sm: "576px", // Replace 'sm' breakpoint with your custom value
-      md: "768px", // Replace 'md' breakpoint
-      lg: "992px", // Replace 'lg' breakpoint
-      xl: "1200px", // Replace 'xl' breakpoint
-      "2xl": "1366px", // Replace '2xl' breakpoint
-    },
+    // screens: {
+    //   sm: "576px", // Replace 'sm' breakpoint with your custom value
+    //   md: "768px", // Replace 'md' breakpoint
+    //   lg: "992px", // Replace 'lg' breakpoint
+    //   xl: "1200px", // Replace 'xl' breakpoint
+    //   "2xl": "1366px", // Replace '2xl' breakpoint
+    // },
   },
   plugins: [],
 } satisfies Config
