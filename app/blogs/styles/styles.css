@@ -1,0 +1,42 @@
+article {
+  margin-inline: 1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-block: 2em;
+  text-align: center;
+}
+
+h3 {
+  margin-block: 1em;
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+section {
+  margin-block: 2em;
+}
+
+p {
+  margin-block: 1em;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-block: 0.5em;
+}
+
+li > p {
+  display: inline;
+  font-size: 1rem;
+  font-weight: normal;
+}

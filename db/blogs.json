@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Beef Dumpling Stew Perfection!",
+    "description": "Everybody loves a good stew!",
+    "by": "Mia Wazeer",
+    "date": "February 10 2024",
+    "img": "/blogs/beef-dumpling-stew/2.jpeg",
+    "href": "beef-dumpling-stew-perfection-by-mia-wazeer"
+  },
+  {
+    "title": "Dancing Shakshuka!",
+    "description": "You didn't see this coming!",
+    "by": "Bruce Harlot",
+    "date": "July 27 2022",
+    "img": "/blogs/shakshuka/1.jpg",
+    "href": "dancing-shakshuka-by-bruce-harlot"
+  },
+  {
+    "title": "Art of Ratatouille",
+    "description": "A culinary masterpiece...",
+    "by": "Alice Marshals",
+    "date": "May 7 2024",
+    "img": "/blogs/ratatouille/1.jpg",
+    "href": "art-of-ratatouille-by-alice-marshals"
+  },
+
+  {
+    "title": "Chicken Fajita; But Better!",
+    "description": "You can't go wrong with this...",
+    "by": "Mike Redfield",
+    "date": "March 13 2023",
+    "img": "/blogs/chicken-fajita/1.jpg",
+    "href": "chicken-fajita-but-better-by-mike-redfield"
+  }
+]
