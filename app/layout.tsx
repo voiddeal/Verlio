@@ -18,8 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden relative">
         <AppProviders>
+          <div className="absolute size-full bg-[url('/food-pattern-light.jpg')] bg-repeat bg-contain bg-center opacity-[7%] -z-20"></div>
           {header}
           {children}
           {footer}

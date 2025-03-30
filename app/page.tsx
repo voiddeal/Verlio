@@ -8,12 +8,11 @@ import Chefs from "@/components/Chefs"
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
-      <div className="absolute w-full h-full bg-[url('/food-pattern-light.jpg')] bg-repeat bg-contain bg-center opacity-5 -z-20"></div>
+    <main className="overflow-x-hidden">
       <Hero />
       <Experience />
-      <FeaturedMeals />
       <Chefs />
+      <FeaturedMeals />
       <Blogs />
       <HowItWorks />
       <HealthyTable />
