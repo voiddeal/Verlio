@@ -1,5 +1,6 @@
 import MealCarousel from "@/components/meal-carousel/MealCarousel"
 import MealPreview from "./MealPreview"
+import { Meal } from "@/types/api"
 
 export default async function FeaturedMeals() {
   const fetchMeals = async () => {
@@ -22,7 +23,6 @@ export default async function FeaturedMeals() {
           return result.value
             .json()
             .then((data) => {
-              // console.log(`Meal ${index + 1}:`, data)
               return data.meals[0]
             })
             .catch((jsonError) => {
@@ -41,13 +41,13 @@ export default async function FeaturedMeals() {
     return mealData
   }
 
-  const data = await fetchMeals()
+  const data: Meal[] = await fetchMeals()
   const meals = data.map((meal) => {
     return <MealPreview meal={meal} />
   })
 
   return (
-    <div className="py-5">
+    <div className="py-5 my-10">
       <div className="flex justify-between px-6 m-4">
         <h4 className="text-3xl">Trendy Recipes</h4>
         <button type="button">View More</button>

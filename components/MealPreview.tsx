@@ -3,8 +3,13 @@
 import Image from "next/image"
 import { useState } from "react"
 import errorImage from "@/public/error-image.png"
+import { Meal } from "@/types/api"
 
-export default function MealPreview({ meal }) {
+interface Props {
+  meal: Meal
+}
+
+export default function MealPreview({ meal }: Props) {
   if (meal === null) {
     return (
       <div className="w-full flex justify-center border-white border-2">
@@ -21,7 +26,7 @@ export default function MealPreview({ meal }) {
   const { idMeal, strMealThumb, strMeal } = meal
   const [imgSrc, setImgSrc] = useState(strMealThumb)
   const ingredients = Object.keys(meal)
-    .filter((key) => key.includes("strIngredient"))
+    .filter((key): key is keyof Meal => key.includes("strIngredient"))
     .map((key) => meal[key])
 
   return (
@@ -33,7 +38,9 @@ export default function MealPreview({ meal }) {
           width={200}
           height={200}
           className="m-auto border-8 border-white rounded-full"
-          onError={() => setImgSrc(errorImage)}
+          onError={() =>
+            setImgSrc(errorImage as unknown as React.SetStateAction<string>)
+          }
         />
       </div>
       <div className="text-left px-5">
