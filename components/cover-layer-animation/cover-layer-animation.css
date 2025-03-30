@@ -49,19 +49,19 @@ no-follow- a simple one-step sliding cover, revealing the content beneath.
 }
 
 .cover-layer.active.to-left::after {
-  animation: to-left 0.6s 0s ease-out forwards;
+  animation: to-left 0.7s 0s ease-out forwards;
 }
 
 .cover-layer.active.to-right::after {
-  animation: to-right 0.6s 0s ease-out forwards;
+  animation: to-right 0.7s 0s ease-out forwards;
 }
 
 .cover-layer.active.to-bottom::after {
-  animation: to-bottom 0.6s 0s ease-out forwards;
+  animation: to-bottom 0.7s 0s ease-out forwards;
 }
 
 .cover-layer.active.to-top::after {
-  animation: to-top 0.6s 0s ease-out forwards;
+  animation: to-top 0.7s 0s ease-out forwards;
 }
 
 @keyframes to-left-follow {
