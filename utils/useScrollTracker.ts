@@ -1,22 +1,28 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { isBrowser } from "./isBrowser"
+import { useEffect, useState } from "react"
 
 export default function useScrollTracker() {
   const [scrollY, setScrollY] = useState<number>(0)
-  const isScrollListenerInitialized = useRef<boolean>(false)
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY)
-  }
 
   useEffect(() => {
-    if (!isScrollListenerInitialized.current) {
-      isScrollListenerInitialized.current = true
-      window.addEventListener("scroll", handleScroll)
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY)
+      })
     }
+
+    // Set the initial scroll position
     setScrollY(window.scrollY)
+
+    // Attach the event listener
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
+
   return scrollY
 }
