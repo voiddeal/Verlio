@@ -1,12 +1,20 @@
 import Heading from "@/components/Heading"
+import Image from "next/image"
 import "../styles/styles.css"
+
 export default function ChickenFajitaButBetterByMikeRedfieldPage() {
   return (
     <main>
-      <header>
+      <header className="relative overflow-hidden">
         <Heading heading="Sizzling Perfection: Chicken Fajitas" />
+        <Image
+          fill
+          src="/blogs/chicken-fajita/chicken-fajita.jpg"
+          alt="man cooking"
+          className="object-cover -z-20 object-center"
+        />
       </header>
-      <article>
+      <article className="blog-article w-[90%] sm:w-[75%] lg:w-[65%] mx-auto">
         <header>
           <h2>Chicken Fajitas: A Flavorful Fiesta</h2>
         </header>
@@ -20,15 +28,24 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
           </small>
         </div>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-        <section>
-          <p>
-            Chicken Fajitas are more than just a meal—they’re a culinary
+        <section className="relative py-10 px-4 min-h-96 flex justify-center items-center">
+          <Image
+            fill
+            src="/blogs/chicken-fajita/2.jpg"
+            alt="man cooking"
+            className="object-cover -z-20 object-top"
+          />
+          <p className="text-white text-center text-lg">
+            ’’ Chicken Fajitas are more than just a meal—they’re a culinary
             celebration! 🌟 With sizzling chicken, vibrant peppers, and warm
             tortillas, this Tex-Mex classic is all about bold flavors and hearty
             satisfaction. Whether it's a casual dinner or a party centerpiece,
             fajitas bring the heat and the fun. Here’s how you can master this
-            sizzling sensation at home.
+            sizzling sensation at home.’’
+            <br />
+            —Mike Redfield
           </p>
+          <div className="absolute size-full inset-0 bg-black/50 -z-10"></div>
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
@@ -86,6 +103,14 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-96 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/chicken-fajita/3.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <div>
             <header>
               <h3>Cooking the Ultimate Chicken Fajitas</h3>
@@ -162,6 +187,14 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-96 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/chicken-fajita/chicken-fajita.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <header>
             <h3>Serving Suggestions</h3>
           </header>

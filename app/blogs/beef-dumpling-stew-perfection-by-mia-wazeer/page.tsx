@@ -1,13 +1,20 @@
 import Heading from "@/components/Heading"
+import Image from "next/image"
 import "../styles/styles.css"
 
 export default function BeefDumplingStewPerfectionByMiaWazeerPage() {
   return (
     <main>
-      <header>
+      <header className="relative overflow-hidden">
         <Heading heading="Art of Beef Dumpling Stew" />
+        <Image
+          fill
+          src="/blogs/beef-dumpling-stew/beef-dumpling-stew.jpg"
+          alt="man cooking"
+          className="object-cover -z-20 object-center"
+        />
       </header>
-      <article>
+      <article className="blog-article w-[90%] sm:w-[75%] lg:w-[65%] mx-auto">
         <header>
           <h2>Mastering the Art of Beef Dumpling Stew: A Chef's Guide</h2>
         </header>
@@ -21,14 +28,23 @@ export default function BeefDumplingStewPerfectionByMiaWazeerPage() {
           </small>
         </div>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-        <section>
-          <p>
-            Beef Dumpling Stew is the epitome of comfort food—a dish that brings
-            warmth, flavor, and satisfaction to any table. Preparing this stew
-            requires time and care, but the reward is a rich, hearty bowl that’s
-            sure to impress. Here’s a comprehensive guide to making this classic
-            meal, with tips to elevate it to perfection.
+        <section className="relative py-10 px-4 min-h-96 flex justify-center items-center">
+          <Image
+            fill
+            src="/blogs/beef-dumpling-stew/1.jpg"
+            alt="man cooking"
+            className="object-cover -z-20 object-top"
+          />
+          <p className="text-white text-center text-lg">
+            ’’Beef Dumpling Stew is the epitome of comfort food—a dish that
+            brings warmth, flavor, and satisfaction to any table. Preparing this
+            stew requires time and care, but the reward is a rich, hearty bowl
+            that’s sure to impress. Here’s a comprehensive guide to making this
+            classic meal, with tips to elevate it to perfection.’’
+            <br />
+            —Mia Wazeer
           </p>
+          <div className="absolute size-full inset-0 bg-black/50 -z-10"></div>
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
@@ -80,6 +96,14 @@ export default function BeefDumplingStewPerfectionByMiaWazeerPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-72 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/beef-dumpling-stew/3.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <div>
             <header>
               <h3>The Cooking Process</h3>
@@ -170,6 +194,14 @@ export default function BeefDumplingStewPerfectionByMiaWazeerPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-96 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/beef-dumpling-stew/beef-dumpling-stew.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <header>
             <h3>Serving Suggestions</h3>
           </header>

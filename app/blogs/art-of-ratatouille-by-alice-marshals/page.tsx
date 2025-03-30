@@ -1,13 +1,20 @@
 import Heading from "@/components/Heading"
 import "../styles/styles.css"
+import Image from "next/image"
 
 export default function ArtOfRatatouilleByAliceMarshalsPage() {
   return (
     <main>
-      <header>
+      <header className="relative overflow-hidden">
         <Heading heading="Art of Ratatouille" />
+        <Image
+          fill
+          src="/blogs/ratatouille/ratatouille.jpg"
+          alt="man cooking"
+          className="object-cover -z-20 object-center"
+        />
       </header>
-      <article>
+      <article className="blog-article w-[90%] sm:w-[75%] lg:w-[65%] mx-auto">
         <header>
           <h2>Mastering the Art of Ratatouille: A Chef's Guide</h2>
           <div className="flex flex-col text-black">
@@ -21,14 +28,23 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
           </div>
         </header>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-        <section>
-          <p>
-            Ratatouille is more than just a recipe; it's an act of culinary
+        <section className="relative py-10 px-4 min-h-96 flex justify-center items-center">
+          <Image
+            fill
+            src="/blogs/ratatouille/2.jpg"
+            alt="man cooking"
+            className="object-cover -z-20 object-top"
+          />
+          <p className="text-white text-center text-lg">
+            ’’Ratatouille is more than just a recipe; it's an act of culinary
             love. To craft the perfect ratatouille, you must respect its
             simplicity while unlocking its potential with thoughtful choices and
             techniques. Here’s a deep dive into creating this rustic French
-            dish, complete with tricks to elevate it.
+            dish, complete with tricks to elevate it.’’
+            <br />
+            —Mia Wazeer
           </p>
+          <div className="absolute size-full inset-0 bg-black/50 -z-10"></div>
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
@@ -97,6 +113,14 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-72 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/ratatouille/3.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <div>
             <header>
               <h3>The Cooking Process</h3>
@@ -229,6 +253,14 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-72 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/ratatouille/ratatouille.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <header>
             <h3>Serving Suggestions</h3>
           </header>

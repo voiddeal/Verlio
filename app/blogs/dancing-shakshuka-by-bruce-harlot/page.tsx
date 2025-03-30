@@ -1,13 +1,20 @@
 import Heading from "@/components/Heading"
+import Image from "next/image"
 import "../styles/styles.css"
 
 export default function DancingShakshukaByBruceHarlotPage() {
   return (
     <main>
-      <header>
+      <header className="relative overflow-hidden">
         <Heading heading="Mastering the Shakshuka Symphony" />
+        <Image
+          fill
+          src="/blogs/shakshuka/shakshuka.jpg"
+          alt="man cooking"
+          className="object-cover -z-20 object-center"
+        />
       </header>
-      <article>
+      <article className="blog-article w-[90%] sm:w-[75%] lg:w-[65%] mx-auto">
         <header>
           <h2>Shakshuka: The Melody of Flavors</h2>
         </header>
@@ -21,16 +28,25 @@ export default function DancingShakshukaByBruceHarlotPage() {
           </small>
         </div>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-        <section>
-          <p>
-            Shakshuka is more than just a dish; it's an invitation to savor the
-            beauty of simplicity. Originating from North Africa and the Middle
-            East, this hearty one-pan delight brings together the bold flavors
-            of tomatoes, peppers, and aromatic spices, crowned with perfectly
-            poached eggs. Whether you're serving it for breakfast, lunch, or
-            dinner, Shakshuka is a celebration of warmth, comfort, and a
-            symphony of vibrant colors.
+        <section className="relative py-10 px-4 min-h-96 flex justify-center items-center">
+          <Image
+            fill
+            src="/blogs/shakshuka/2.jpg"
+            alt="man cooking"
+            className="object-cover -z-20"
+          />
+          <p className="text-white text-center text-lg">
+            ’’Shakshuka is more than just a dish; it's an invitation to savor
+            the beauty of simplicity. Originating from North Africa and the
+            Middle East, this hearty one-pan delight brings together the bold
+            flavors of tomatoes, peppers, and aromatic spices, crowned with
+            perfectly poached eggs. Whether you're serving it for breakfast,
+            lunch, or dinner, Shakshuka is a celebration of warmth, comfort, and
+            a symphony of vibrant colors.’’
+            <br />
+            —Bruce Harlot
           </p>
+          <div className="absolute size-full inset-0 bg-black/50 -z-10"></div>
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
@@ -89,6 +105,14 @@ export default function DancingShakshukaByBruceHarlotPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-60 md:min-h-[20rem]">
+            <Image
+              fill
+              src="/blogs/shakshuka/3.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <div>
             <header>
               <h3>The Art of Cooking Shakshuka</h3>
@@ -182,6 +206,14 @@ export default function DancingShakshukaByBruceHarlotPage() {
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <section>
+          <div className="relative min-h-96 md:min-h-[30rem]">
+            <Image
+              fill
+              src="/blogs/shakshuka/shakshuka.jpg"
+              alt="person cooking"
+              className="object-cover"
+            />
+          </div>
           <header>
             <h3>Serving Ideas</h3>
           </header>
