@@ -1,15 +1,15 @@
-"use client"
-
 import Image from "next/image"
-import { useState } from "react"
 import errorImage from "@/public/error-image.png"
 import { Meal } from "@/types/api"
+import Link from "next/link"
 
 interface Props {
   meal: Meal
 }
 
 export default function MealPreview({ meal }: Props) {
+  console.log(meal)
+
   if (meal === null) {
     return (
       <div className="w-full flex justify-center border-white border-2">
@@ -17,42 +17,45 @@ export default function MealPreview({ meal }: Props) {
           src={errorImage}
           alt="image"
           width={300}
-          height={200}
+          height={300}
           className="m-auto"
         />
       </div>
     )
   }
-  const { idMeal, strMealThumb, strMeal } = meal
-  const [imgSrc, setImgSrc] = useState(strMealThumb)
+  const { idMeal, strMealThumb, strMeal, strCategory } = meal
   const ingredients = Object.keys(meal)
     .filter((key): key is keyof Meal => key.includes("strIngredient"))
     .map((key) => meal[key])
 
   return (
-    <div key={idMeal} className="border-white border-2">
-      <div className="bg-green-200">
+    <a
+      href={`/menu/${strCategory?.toLowerCase()}/#${idMeal}`}
+      key={idMeal}
+      className="border-white border-2 bg-green-200 relative"
+      title={strMeal}
+    >
+      <div className="bg-transparent">
         <Image
-          src={imgSrc}
+          src={strMealThumb}
           alt="image"
           width={200}
           height={200}
           className="m-auto border-8 border-white rounded-full"
-          onError={() =>
-            setImgSrc(errorImage as unknown as React.SetStateAction<string>)
-          }
         />
       </div>
-      <div className="text-left px-5">
-        <span className="text-lg">{strMeal}</span>
+      <div className="text-left px-5 bg-green-300">
+        <span className="text-lg text-primary-default line-clamp-1 pt-1">
+          {strMeal}
+        </span>
         <br />
-        <span className="text-sm">
+        <span className="text-sm text-primary-default">
           Ingredients:{" "}
-          <span className="text-primary-light">
+          <span className="text-primary-light line-clamp-1">
             {ingredients.slice(0, 3).join(", ")}
           </span>
         </span>
       </div>
-    </div>
+    </a>
   )
 }

@@ -4,7 +4,6 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "./meal-carousel.css"
-import { Meal } from "@/types/api"
 
 interface Props {
   meals: React.ReactNode
@@ -13,7 +12,7 @@ interface Props {
 export default function MealCarousel({ meals }: Props) {
   const settings = {
     dots: true,
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -46,5 +45,9 @@ export default function MealCarousel({ meals }: Props) {
     ],
   }
 
-  return <Slider {...settings}>{meals}</Slider>
+  return (
+    <Slider className="relative" {...settings}>
+      {meals}
+    </Slider>
+  )
 }
