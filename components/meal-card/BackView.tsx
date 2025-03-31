@@ -31,7 +31,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
 
     if (data) {
       const meal = data.meals[0]
-      const { idMeal, strMeal, strSource, strYoutube, strArea } = meal
+      const { strSource, strYoutube, strArea } = meal
       const ingredientsArray: string[] = []
       Object.entries(meal).forEach(([key, value]) => {
         if (key.includes("strIngredient") && value) {
@@ -42,6 +42,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
         <span
           key={index}
           className="inline-block p-1 m-1 bg-theme-blue-dark text-white text-sm"
+          title={ing}
         >
           {ing}
         </span>

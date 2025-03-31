@@ -4,6 +4,7 @@ import { useRef, useState, createContext } from "react"
 import "./styles/flip-card.css"
 
 interface Props {
+  id: string
   front: React.ReactNode | React.JSX.Element
   back: React.ReactNode | React.JSX.Element
   size?: string
@@ -18,6 +19,7 @@ interface Props {
 }
 
 export default function FlipCard({
+  id,
   front,
   back,
   size,
@@ -35,7 +37,7 @@ export default function FlipCard({
 
   return (
     <FlipContext.Provider value={{ isFlipped }}>
-      <div className="container">
+      <div className="container" id={id}>
         <div
           className={`face ${isFlipped ? "is-flipped" : ""}`}
           ref={face}
