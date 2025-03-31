@@ -1,8 +1,9 @@
 import FlipCard from "@/components/flip-card/FlipCard"
+import Heading from "@/components/Heading"
 import BackView from "@/components/meal-card/BackView"
 import FrontView from "@/components/meal-card/FrontView"
 import { MealList } from "@/types/api"
-import Error from "next/error"
+import Image from "next/image"
 
 interface Props {
   params: Promise<{ category: string }>
@@ -22,6 +23,7 @@ export default async function Category({ params }: Props) {
 
     return (
       <FlipCard
+        id={idMeal}
         key={idMeal}
         size="300px"
         duration={1200}
@@ -45,13 +47,21 @@ export default async function Category({ params }: Props) {
   })
 
   return (
-    <div>
-      <div className="w-11/12 sm:w-9/12 mx-auto rounded-lg">
-        <div className="text-4xl text-center py-4">MENUS</div>
-        <div className="border-y-2 my-6 py-4 grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-5">
+    <main>
+      <header className="relative overflow-hidden">
+        <Heading heading={category.toUpperCase()} />
+        <Image
+          fill
+          src={`/menu/${category.toLowerCase()}.jpg`}
+          alt="man cooking"
+          className="object-cover -z-20 object-center"
+        />
+      </header>
+      <section className="w-11/12 sm:w-9/12 mx-auto rounded-lg">
+        <div className="border-y-2 border-gray-300 my-6 py-4 grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-10">
           {mealElements}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
