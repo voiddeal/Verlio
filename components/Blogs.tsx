@@ -1,8 +1,4 @@
 import Image from "next/image"
-import stew from "@/public/blogs/beef-dumpling-stew/1.jpg"
-import fajita from "@/public/blogs/chicken-fajita/1.jpg"
-import ratatouille from "@/public/blogs/ratatouille/1.jpg"
-import shakshuka from "@/public/blogs/shakshuka/1.jpg"
 import Link from "next/link"
 import blogs from "@/db/blogs.json"
 
@@ -14,7 +10,7 @@ export default function Blogs() {
     return (
       <Link
         key={date}
-        href={href}
+        href={`/blogs/${href}`}
         className={`flex-1 lg:flex-initial flex flex-col lg:flex-row lg:justify-center items-center gap-y-1 lg:gap-y-0 lg:gap-x-2 rounded-lg p-4 ${
           isLast ? "sm:flex hidden" : ""
         }`}
@@ -47,7 +43,7 @@ export default function Blogs() {
       <div className="flex flex-col lg:flex-row justify-center gap-x-6 p-5">
         {/* Main post */}
         <Link
-          href={blogs[0].href}
+          href={`/blogs/${blogs[0].href}`}
           className="w-full lg:w-[60%] flex flex-col justify-center items-center m-auto lg:m-[unset]"
         >
           <Image
