@@ -15,16 +15,9 @@ export default function Chefs() {
   const chefJSX = chefs.map((chef) => {
     const { name, role, img, socials } = chef
     return (
-      <div className="group h-full">
+      <div key={name} className="group h-full">
         <div className="relative overflow-hidden rounded-3xl size-full">
-          <Image
-            src={img}
-            alt="Freja Charles"
-            width={500}
-            height={500}
-            className="size-full object-cover"
-          />
-          <div className="absolute size-full inset-0 m-auto opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center z-20 bg-black/0  group-hover:bg-black/60 gap-y-2">
+          <div className="absolute size-full inset-0 m-auto opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center bg-black/0 z-10 group-hover:bg-black/60 gap-y-2">
             <a
               href={socials.twitter || undefined}
               className={`${socialLinkClasses} hover:outline-cyan-400`}
@@ -50,6 +43,13 @@ export default function Chefs() {
               <FaLinkedinIn className={socialIconClasses} />
             </a>
           </div>
+          <Image
+            src={img}
+            alt="Freja Charles"
+            width={500}
+            height={500}
+            className="size-full object-cover"
+          />
         </div>
         <div className="w-full h-full">
           <span className="block text-center py-2">{name}</span>
