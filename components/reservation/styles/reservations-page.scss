@@ -7,15 +7,22 @@
 }
 
 .reservation-form-basics {
-  @apply bg-inherit appearance-none border-none outline-none flex-1 text-stone-800;
+  @apply bg-inherit appearance-none border-none outline-none flex-1 text-stone-800 lg:font-bold;
   padding-inline: min(5vw, 4em);
   padding-block: 2dvw;
   font-size: clamp(1.1rem, 3dvw, 2.2rem);
   cursor: inherit;
+
+  > option {
+    padding-inline: min(3vw, 2em);
+    padding-block: 1dvw;
+    @apply font-normal;
+    font-size: clamp(1rem, 2dvw, 1.5rem);
+  }
 }
 
 .reservation-form-dropdown-arrow-container {
-  @apply flex justify-center items-center text-primary-default;
+  @apply flex justify-center items-center text-primary-default md:scale-150 md:pr-2 lg:scale-[3];
   cursor: inherit;
 }
 

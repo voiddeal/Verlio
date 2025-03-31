@@ -15,7 +15,7 @@ export default function ProceedButton() {
   return (
     <div className="p-4 bg-black bg-opacity-90 backdrop-blur-sm ">
       <button
-        className="block w-fit m-auto py-2 px-14 text-lg bg-theme-blue-default hover:bg-theme-blue-light cursor-pointer disabled:hover:cursor-not-allowed disabled:bg-slate-600 transition-colors text-primary-default"
+        className="block w-fit m-auto py-2 px-14 text-lg bg-theme-blue-default hover:bg-theme-blue-light cursor-pointer disabled:hover:cursor-not-allowed disabled:bg-slate-600 transition-colors text-primary-default sm:text-lg lg:text-xl"
         onClick={goToSecondStep}
         disabled={!hour}
         tabIndex={!hour ? 0 : -1}

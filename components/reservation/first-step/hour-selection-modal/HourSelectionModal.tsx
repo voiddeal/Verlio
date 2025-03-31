@@ -20,7 +20,7 @@ export default function HourSelectModal() {
       <li
         key={content}
         data-selected={`${selected}`}
-        className="py-4 border-t last:border-b hover:bg-theme-green-light active:bg-theme-green-default hover:text-primary-default select-none cursor-pointer data-[selected=true]:bg-theme-green-default data-[selected=true]:text-primary-default"
+        className="py-4 border-t last:border-b hover:bg-theme-green-light active:bg-theme-green-default hover:text-primary-default select-none cursor-pointer data-[selected=true]:bg-theme-green-default data-[selected=true]:text-primary-default sm:text-lg md:text-xl xl:text-2xl"
         onClick={() => selectHour(content)}
       >
         {content.toLowerCase()}

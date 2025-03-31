@@ -6,7 +6,7 @@ import { FaArrowTurnUp } from "react-icons/fa6"
 
 export default function SecondStep() {
   return (
-    <div className="relative my-4" id="reservation-second-step">
+    <section className="relative my-4" id="reservation-second-step">
       <LockOverlay originStep={2} />
       <BackToFirstStepButton />
       <div className="bg-sky-100 py-2 my-4 text-center">
@@ -77,6 +77,6 @@ export default function SecondStep() {
         Certain U.S. consumers may have additional data rights, which can be
         exercised by clicking Do Not Sell or Share My Personal Information.
       </p>
-    </div>
+    </section>
   )
 }

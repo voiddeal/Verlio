@@ -15,7 +15,7 @@ export default function FirstStep() {
   const { shouldHourModalOpen } = useAppSelector((state) => state.app)
 
   return (
-    <div className="relative" id="reservation-first-step">
+    <section className="relative" id="reservation-first-step">
       <LockOverlay originStep={1} />
       <div className="h-20 w-full"></div>
       <h3 id="reservation-form-first-step" className="py-2 text-xl font-bold">
@@ -39,6 +39,6 @@ export default function FirstStep() {
           <HourSelectionModal />
         </Portal>
       )}
-    </div>
+    </section>
   )
 }

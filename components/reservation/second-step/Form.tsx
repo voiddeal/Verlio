@@ -80,7 +80,7 @@ export default function Form() {
 
       <button
         type="submit"
-        className="block w-full text-center bg-slate-300 cursor-pointer py-2 my-4"
+        className="block w-full text-center cursor-pointer py-4 text-xl bg-theme-blue-dark/100 text-white mb-8 hover:bg-theme-blue-default/100"
       >
         Confirm Reservation
       </button>
