@@ -1,10 +1,22 @@
+"use client"
+
 import Image from "next/image"
 import CoverLayer from "@/components/cover-layer-animation/CoverLayerAnimation"
+import useBoundingClientRect from "@/hooks/useBoundingClientRect"
+import { useRef } from "react"
 
 export default function Vibe() {
+  const image = useRef<HTMLImageElement>(null)
+  const text = useRef<HTMLImageElement>(null)
+  const { top } = useBoundingClientRect(image)
+
   return (
-    <div className="flex flex-col md:flex-row z-20 mx-auto relative">
-      <div className="relative md:w-6/12">
+    <div className="flex flex-col md:flex-row z-20 relative">
+      <div
+        className="relative md:w-6/12"
+        ref={image}
+        style={{ transform: `translateY(-${top * 0.2}px)` }}
+      >
         <CoverLayer to="bottom" />
         <Image
           src={"/vibe.jpg"}
@@ -14,7 +26,11 @@ export default function Vibe() {
           className="w-full h-full object-cover object-bottom aspect-[3/2] md:aspect-[4/5]"
         />
       </div>
-      <div className="flex-col md:flex-row relative md:w-6/12">
+      <div
+        className="relative md:w-6/12"
+        ref={text}
+        style={{ transform: `translateY(${top * 0.2}px)` }}
+      >
         <CoverLayer to="right" follow />
         <div className="w-full h-full text-center px-6 py-12 bg-gray-100">
           <h2 className="text-3xl font-bold mb-4 text-gray-800">
