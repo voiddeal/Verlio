@@ -18,6 +18,7 @@ export interface Meal {
   strMeal: string
   strMealThumb: string
   idMeal: string
+  strCategory?: string
 }
 
 export interface MealDetail {

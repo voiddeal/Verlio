@@ -2,34 +2,34 @@
   margin-inline: 1em;
 }
 
-article h2 {
+.blog-article h2 {
   font-size: 1.6rem !important;
   margin-block: 2em;
   text-align: center;
 }
 
-article h3 {
+.blog-article h3 {
   margin-block: 1em;
   font-size: 1.35rem;
 }
 
-article h4 {
+.blog-article h4 {
   font-size: 1.2rem;
 }
 
-article section {
+.blog-article section {
   margin-block: 2em;
 }
 
-article p {
+.blog-article p {
   margin-block: 1em;
 }
 
-article ul {
+.blog-article ul {
   list-style: disc inside;
 }
 
-article li {
+.blog-article li {
   font-size: 1rem;
   font-weight: bold;
   margin-block: 0.5em;
