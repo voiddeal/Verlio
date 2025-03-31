@@ -37,11 +37,13 @@ export default function Records() {
         <h2 className="text-2xl sm:text-3xl md:text-5xl text-center py-2">
           <span>A Culinary Experience of</span>
           <br />
-          <span className="text-orange">Elegance and Excellence</span>
+          <span className="text-theme-green-default">
+            Elegance and Excellence
+          </span>
         </h2>
         <p className="text-center py-6 text-sm sm:text-base">
           at Verlio five-star experience isn’t just a promise —
-          <span className="text-orange"> it’s a standard.</span>
+          <span className="text-theme-green-default"> it’s a standard.</span>
         </p>
       </div>
       <div
@@ -58,15 +60,15 @@ export default function Records() {
               end={1_100_000}
               suffix="+"
               duration={4}
-              className="text-lg"
+              className="text-lg lg:text-2xl"
             />
           )) ||
             "0"}
-          <small>Satisfied Customers</small>
+          <span className="text-sm xl:text-base">Satisfied Customers</span>
         </div>
         <div className="flex flex-col justify-center items-center">
           <div>
-            <BsFillCartCheckFill className="text-2xl" />
+            <BsFillCartCheckFill className="text-2xl xl:text-2xl" />
           </div>
           {(inView && (
             <CountUp
@@ -74,11 +76,11 @@ export default function Records() {
               end={12_000}
               suffix="+"
               duration={4}
-              className="text-lg"
+              className="text-lg lg:text-2xl"
             />
           )) ||
             "0"}
-          <small>Online Orders</small>
+          <span className="text-sm xl:text-base">Online Orders</span>
         </div>
         <div className="flex flex-col justify-center items-center">
           <div>
@@ -90,11 +92,11 @@ export default function Records() {
               end={850_000}
               suffix="+"
               duration={4}
-              className="text-lg"
+              className="text-lg lg:text-2xl"
             />
           )) ||
             "0"}
-          <small>Served Dinners</small>
+          <span className="text-sm xl:text-base">Served Dinners</span>
         </div>
       </div>
     </div>
