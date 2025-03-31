@@ -20,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-x-hidden relative">
         <AppProviders>
-          <div className="absolute size-full bg-[url('/food-pattern-light.jpg')] bg-repeat bg-contain bg-center opacity-[7%] -z-20"></div>
+          <div className="absolute size-full bg-[url('/food-pattern-light.jpg')] bg-repeat bg-contain bg-center opacity-5 -z-20"></div>
+          <div className="absolute bg-green-200/40 size-full -z-30 "></div>
           {header}
           {children}
           {footer}
