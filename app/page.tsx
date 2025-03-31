@@ -1,8 +1,8 @@
 import Hero from "@/components/hero/Hero"
-import FeaturedMeals from "@/components/FeaturedMeals"
+import FeaturedMeals from "@/components/meal-carousel/FeaturedMeals"
 import HealthyTable from "@/components/HealthyTable"
 import Blogs from "@/components/Blogs"
-import HowItWorks from "./reservation/HowItWorks"
+import HowItWorks from "../components/HowItWorks"
 import Experience from "@/components/experience/Experience"
 import Chefs from "@/components/Chefs"
 
