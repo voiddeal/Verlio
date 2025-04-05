@@ -1,24 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import type { RootState } from "@/redux/store"
 import today from "@/utils/today"
-
-interface ReservationInfo {
-  party: string
-  date: string
-  hour: string | undefined
-  fname: string | undefined
-  lname: string | undefined
-  tel: string | undefined
-  email: string | undefined
-  request: string | undefined
-  occasion:
-    | "none"
-    | "birthday"
-    | "date"
-    | "anniversary"
-    | "special-occasion"
-    | "business-meal"
-}
+import { ReservationInfo } from "@/types/models"
 
 const initialState: ReservationInfo = {
   party: "2",

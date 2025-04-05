@@ -1,4 +1,5 @@
-import React from "react"
+"use client"
+
 import ReactDOM from "react-dom"
 
 interface PortalProps {
@@ -10,6 +11,7 @@ const Portal: React.FC<PortalProps> = ({ children, containerId }) => {
   const containerElement = containerId
     ? document.getElementById(containerId)
     : document.body
+
   return containerElement && ReactDOM.createPortal(children, containerElement)
 }
 

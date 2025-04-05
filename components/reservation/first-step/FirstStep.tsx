@@ -9,7 +9,7 @@ import { useAppSelector } from "@/redux/hooks"
 import Portal from "@/components/Portal"
 import HourSelectionModal from "./hour-selection-modal/HourSelectionModal"
 import LockOverlay from "../LockOverlay"
-import "../styles/reservations-page.css"
+import "./styles/reservations-page.css"
 
 export default function FirstStep() {
   const { hourModalDisplay } = useAppSelector((state) => state.app)

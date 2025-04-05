@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { reservationInfoActions } from "@/redux/slices/reservationInfoSlice"
-import { IoIosArrowDown } from "react-icons/io"
+import { IoIosArrowDown, IoMdCheckmarkCircleOutline } from "react-icons/io"
 import dateFormatter from "@/utils/dateFormatter"
 
 export default function DateSelectDropdown() {
@@ -47,18 +47,25 @@ export default function DateSelectDropdown() {
   }
 
   return (
-    <div className="reservation-form-basics-container">
-      <select
-        name="reservation-date"
-        className="reservation-form-basics"
-        value={date}
-        aria-label="Choose a date"
-        onChange={(e) => updateDate(e.currentTarget.value)}
-      >
-        {dayOptions}
-      </select>
-      <div className="reservation-form-dropdown-arrow-container">
-        <IoIosArrowDown />
+    <div>
+      <IoMdCheckmarkCircleOutline
+        color="green"
+        size={50}
+        className="mx-auto mb-4"
+      />
+      <div className="reservation-form-basics-container">
+        <select
+          name="reservation-date"
+          className="reservation-form-basics"
+          value={date}
+          aria-label="Choose a date"
+          onChange={(e) => updateDate(e.currentTarget.value)}
+        >
+          {dayOptions}
+        </select>
+        <div className="reservation-form-dropdown-arrow-container">
+          <IoIosArrowDown />
+        </div>
       </div>
     </div>
   )
