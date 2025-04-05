@@ -49,10 +49,9 @@ export default async function FeaturedMeals() {
   return (
     <div className="py-5 my-10">
       <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-      <div className="flex justify-between px-6 m-4">
-        <h4 className="text-3xl">Trendy Recipes</h4>
-        <button type="button">View More</button>
-      </div>
+      <header className="my-8">
+        <h4 className="text-3xl text-center text-orange">Trendy Recipes</h4>
+      </header>
       <MealCarousel meals={meals} />
     </div>
   )
