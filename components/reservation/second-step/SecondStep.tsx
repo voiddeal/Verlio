@@ -1,5 +1,5 @@
 import CountdownTimer from "@/components/CountdownTimer"
-import Form from "./Form"
+import Form from "./form/Form"
 import BackToFirstStepButton from "./BackToFirstStepButton"
 import LockOverlay from "../LockOverlay"
 import { FaArrowTurnUp } from "react-icons/fa6"

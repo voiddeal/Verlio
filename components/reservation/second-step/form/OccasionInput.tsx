@@ -1,12 +1,21 @@
 "use client"
 
+import { useAppDispatch } from "@/redux/hooks"
+import { reservationInfoActions } from "@/redux/slices/reservationInfoSlice"
+import { ReservationInfo } from "@/types/models"
+import { useState } from "react"
+
 export default function OccasionInput() {
+  const [value, setValue] = useState<string>("")
+  const dispatch = useAppDispatch()
   const handleOccasionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const target = e.currentTarget
-    const value = e.currentTarget.value
+    const value = e.currentTarget.value as ReservationInfo["occasion"]
     if (value === "none") {
       target.selectedIndex = 0
     }
+    setValue(value)
+    dispatch(reservationInfoActions.setOccasion(value))
   }
 
   return (
@@ -14,6 +23,7 @@ export default function OccasionInput() {
       name="occasion"
       aria-label="Select an occasion (optional)"
       className="border p-3 w-fit"
+      value={value}
       onChange={handleOccasionChange}
     >
       <option hidden>Select an occasion (optional)</option>

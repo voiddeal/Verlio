@@ -1,7 +1,8 @@
 import { Country } from "@/types/api"
-import TelInputSelect from "./TelInputSelect"
+import TelCountrySelect from "./TelCountrySelect"
+import TelInput from "./TelInput"
 
-export default async function TelInput() {
+export default async function TelField() {
   const countries: Country[] = await fetch(
     "https://www.apicountries.com/countries"
   ).then((res) => res.json())
@@ -9,14 +10,8 @@ export default async function TelInput() {
   return (
     <div className="flex flex-col gap-y-1">
       <div className="flex">
-        <TelInputSelect countries={countries} />
-        <input
-          type="tel"
-          name="tel"
-          placeholder="Phone number"
-          className="border p-3 w-full"
-          required
-        />
+        <TelCountrySelect countries={countries} />
+        <TelInput />
       </div>
       <small>Phone number is required.</small>
     </div>

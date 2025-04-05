@@ -7,7 +7,7 @@ interface Props {
   countries: Country[]
 }
 
-export default function TelInputSelect({ countries }: Props) {
+export default function TelCountrySelect({ countries }: Props) {
   const [image, setImage] = useState<string>("https://flagcdn.com/ca.svg")
   const countryOptions = countries?.map((country) => {
     const { name, callingCodes, flag } = country
