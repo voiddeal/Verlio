@@ -3,13 +3,15 @@ import type { RootState } from "@/redux/store"
 
 interface App {
   isClosed: boolean
-  shouldHourModalOpen: boolean
+  hourModalDisplay: boolean
+  reservationConfirmationModalDisplay: boolean
   currentReservationStep: 1 | 2
 }
 
 const initialState: App = {
   isClosed: false,
-  shouldHourModalOpen: false,
+  hourModalDisplay: false,
+  reservationConfirmationModalDisplay: false,
   currentReservationStep: 1,
 }
 
@@ -20,12 +22,21 @@ export const appSlice = createSlice({
     setIsClosed: (state, action: PayloadAction<App["isClosed"]>) => {
       state.isClosed = action.payload
     },
-    setShouldHourModalOpen: (
+
+    setHourModalDisplay: (
       state,
-      action: PayloadAction<App["shouldHourModalOpen"]>
+      action: PayloadAction<App["hourModalDisplay"]>
     ) => {
-      state.shouldHourModalOpen = action.payload
+      state.hourModalDisplay = action.payload
     },
+
+    setReservationConfirmationModalDisplay: (
+      state,
+      action: PayloadAction<App["reservationConfirmationModalDisplay"]>
+    ) => {
+      state.reservationConfirmationModalDisplay = action.payload
+    },
+
     setCurrentReservationStep: (
       state,
       action: PayloadAction<App["currentReservationStep"]>

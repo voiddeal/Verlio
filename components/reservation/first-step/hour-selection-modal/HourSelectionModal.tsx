@@ -32,13 +32,13 @@ export default function HourSelectModal() {
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     if (e.currentTarget.id === "modal-backdrop") {
-      dispatch(appActions.setShouldHourModalOpen(false))
+      dispatch(appActions.setHourModalDisplay(false))
     }
   }
 
   const selectHour = (time: string) => {
     dispatch(reservationInfoActions.setHour(time))
-    dispatch(appActions.setShouldHourModalOpen(false))
+    dispatch(appActions.setHourModalDisplay(false))
   }
 
   useEffect(() => {
@@ -60,6 +60,7 @@ export default function HourSelectModal() {
       id="modal-backdrop"
       className="fixed h-dvh w-dvw inset-0 bg-black bg-opacity-20 backdrop-blur-xl text-white flex justify-center items-center z-50 overflow-y-auto pt-20"
       onClick={handleBackdropClick}
+      role="dialog"
     >
       <ul className="hour-selection-modal-list" ref={list}>
         {timeOptionElementsList}
