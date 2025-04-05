@@ -17,7 +17,7 @@ export default function Chefs() {
     return (
       <div key={name} className="group h-full">
         <div className="relative overflow-hidden rounded-3xl size-full">
-          <div className="absolute size-full inset-0 m-auto opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center bg-black/0 z-10 group-hover:bg-black/60 gap-y-2">
+          <div className="absolute size-full inset-0 m-auto opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center bg-black/0 z-[15] group-hover:bg-black/60 gap-y-2">
             <a
               href={socials.twitter || undefined}
               className={`${socialLinkClasses} hover:outline-cyan-400`}
@@ -64,7 +64,7 @@ export default function Chefs() {
       <CoverLayer to="bottom" />
       <div className="py-10 w-11/12 sm:w-5/6 md:w-2/3 mx-auto">
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
-        <h4 className="text-3xl text-center pb-8">
+        <h4 className="text-3xl text-center my-8">
           <span className="text-orange">The Masters</span> Behind the Apron
         </h4>
         <div className="flex justify-center gap-x-4 px-2">{chefJSX}</div>
