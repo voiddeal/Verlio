@@ -3,6 +3,8 @@ import person from "@/public/gallery/kid-laughing.jpg"
 import pic1 from "@/public/gallery/food-pic-2.jpg"
 import pic2 from "@/public/gallery/food-pic-4.jpg"
 import pic3 from "@/public/gallery/food-pic-5.jpg"
+import Link from "next/link"
+import { CgArrowLongRight } from "react-icons/cg"
 
 export default function HealthyTable() {
   const attention = "border-b-2 border-b-theme-green-light"
@@ -31,6 +33,13 @@ export default function HealthyTable() {
               place at every table.
             </span>
           </p>
+          <Link
+            href={"/blogs/healthy-table"}
+            className="inline-block my-4 py-4 px-8 bg-theme-green-light text-black rounded-lg group"
+          >
+            <span className="pr-2">Read More</span>
+            <CgArrowLongRight className="inline-block size-7 group-hover:translate-x-5 transition-transform" />
+          </Link>
         </div>
       </div>
       <div className="w-full h-full sm:max-w-60 sm:flex justify-center items-center absolute inset-0 sm:relative -z-10 sm:z-0">
