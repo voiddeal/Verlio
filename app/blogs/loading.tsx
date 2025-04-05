@@ -1,4 +1,4 @@
-import BeatLoader from "@/components/BeatLoader"
+import BeatLoader from "@/components/loaders/BeatLoader"
 
 export default function Loading() {
   return <BeatLoader />
