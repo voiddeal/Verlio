@@ -5,6 +5,7 @@ interface App {
   isClosed: boolean
   hourModalDisplay: boolean
   reservationConfirmationModalDisplay: boolean
+  locationModalDisplay: boolean
   currentReservationStep: 1 | 2
 }
 
@@ -12,6 +13,7 @@ const initialState: App = {
   isClosed: false,
   hourModalDisplay: false,
   reservationConfirmationModalDisplay: false,
+  locationModalDisplay: false,
   currentReservationStep: 1,
 }
 
@@ -35,6 +37,13 @@ export const appSlice = createSlice({
       action: PayloadAction<App["reservationConfirmationModalDisplay"]>
     ) => {
       state.reservationConfirmationModalDisplay = action.payload
+    },
+
+    setLocationModalDisplay: (
+      state,
+      action: PayloadAction<App["locationModalDisplay"]>
+    ) => {
+      state.locationModalDisplay = action.payload
     },
 
     setCurrentReservationStep: (

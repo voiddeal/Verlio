@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Menus",
+    "href": "/menu"
+  },
+  {
+    "name": "Reserve",
+    "href": "/reservation"
+  },
+  {
+    "name": "Order",
+    "href": "/takeout"
+  }
+]
