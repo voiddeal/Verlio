@@ -2,21 +2,21 @@
 
 import CoverLayer from "@/components/cover-layer-animation/CoverLayerAnimation"
 import useBoundingClientRect from "@/hooks/useBoundingClientRect"
+import useSmoothAnimation from "@/hooks/useViewportAnimation"
 import Image from "next/image"
+import Link from "next/link"
 import { useRef } from "react"
 
 export default function Taste() {
   const image = useRef<HTMLImageElement>(null)
   const text = useRef<HTMLImageElement>(null)
   const { top } = useBoundingClientRect(image)
+  useSmoothAnimation({ targetValue: { y: -top * 0.2 }, elementRef: image })
+  useSmoothAnimation({ targetValue: { y: top * 0.1 }, elementRef: text })
 
   return (
     <div className="flex flex-col md:flex-row-reverse">
-      <div
-        className="relative md:w-6/12"
-        ref={image}
-        style={{ transform: `translateY(-${top * 0.2}px)` }}
-      >
+      <div className="relative md:w-6/12 will-change-transform" ref={image}>
         <CoverLayer to="bottom" />
         <Image
           src={"/taste.jpg"}
@@ -26,13 +26,9 @@ export default function Taste() {
           className="w-full h-full object-cover aspect-[3/2] md:aspect-[4/5]"
         />
       </div>
-      <div
-        className="relative md:w-6/12"
-        ref={text}
-        style={{ transform: `translateY(${top * 0.2}px)` }}
-      >
+      <div className="relative md:w-6/12 will-change-transform" ref={text}>
         <CoverLayer to="right" follow />
-        <div className="w-full h-full text-center px-6 py-12 bg-gray-100">
+        <div className="w-full h-full text-center px-6 py-12 bg-gray-50 flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-4 text-gray-800">
             Exceptional Food, Extraordinary Flavor
           </h2>
@@ -48,12 +44,12 @@ export default function Taste() {
             Whether you're exploring our menu or savoring your favorites, each
             bite is unforgettable.
           </p>
-          <button
-            type="button"
+          <Link
+            href={"/menu"}
             className="cursor-pointer py-2 px-4 mt-8 bg-theme-blue-dark text-white"
           >
             View the Menu
-          </button>
+          </Link>
         </div>
       </div>
     </div>
