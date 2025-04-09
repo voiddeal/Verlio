@@ -39,6 +39,14 @@ export default function LocationModal() {
         }),
       })
     }
+
+    document.documentElement.style.overflow = "hidden"
+    document.documentElement.style.height = "100vh"
+
+    return () => {
+      document.documentElement.style.overflow = "unset"
+      document.documentElement.style.height = "auto"
+    }
   }, [])
 
   return (
