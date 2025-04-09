@@ -1,8 +1,8 @@
 import Image from "next/image"
-import { CgArrowLongRight } from "react-icons/cg"
-import { FaArrowTurnUp } from "react-icons/fa6"
 import cards from "@/db/how-it-works-cards.json"
 import Link from "next/link"
+import { CgArrowLongRight } from "react-icons/cg"
+import { FaArrowTurnUp } from "react-icons/fa6"
 
 export default function HowItWorks() {
   const cardElements = cards.map((card) => {
@@ -10,7 +10,7 @@ export default function HowItWorks() {
     return (
       <Link
         href={href}
-        className="relative flex-1 flex flex-col justify-center items-center hover:shadow-[0_8px_15px_rgba(0,0,0,0.2)] rounded-[80px] transition-all backdrop-blur-sm hover:backdrop-blur-[8px] border-2 border-green-300/70 border-x-0 hover:border-transparent cursor-pointer select-none group overflow-hidden"
+        className="relative flex-1 flex flex-col justify-center items-center hover:shadow-[0_8px_15px_rgba(0,0,0,0.2)] rounded-[80px] transition-all backdrop-blur-sm hover:backdrop-blur-[8px] border-b-2 border-green-300/70 hover:border-transparent cursor-pointer select-none group overflow-hidden"
         key={title}
       >
         <Image
@@ -34,7 +34,7 @@ export default function HowItWorks() {
   })
 
   return (
-    <section>
+    <section id="how-it-works">
       <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
       <h4 className="text-center text-4xl my-8 text-orange">
         <FaArrowTurnUp className="inline rotate-180 mr-4" />
