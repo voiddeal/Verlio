@@ -1,5 +1,5 @@
-import ButtomNavbar from "@/components/ButtomNavbar"
+import BottomNavbar from "@/components/BottomNavbar"
 
 export default function DefaultButtomNavbarSlot() {
-  return <ButtomNavbar />
+  return <BottomNavbar />
 }

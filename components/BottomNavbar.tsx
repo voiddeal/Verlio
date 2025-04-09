@@ -14,7 +14,7 @@ import LocationModal from "@/components/LocationModal"
 
 const Portal = lazy(() => import("@/components/Portal"))
 
-export default function ButtomNavbar() {
+export default function BottomNavbar() {
   const dispatch = useAppDispatch()
   const { locationModalDisplay } = useAppSelector((state) => state.app)
   const btnClasses =
