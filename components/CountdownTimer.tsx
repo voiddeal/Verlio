@@ -1,5 +1,6 @@
 "use client"
 
+import { useAppSelector } from "@/redux/hooks"
 import { useState, useEffect } from "react"
 
 interface CountdownTimerProps {
@@ -7,25 +8,31 @@ interface CountdownTimerProps {
 }
 
 export default function CountdownTimer({ time = 300 }: CountdownTimerProps) {
-  const [timeLeft, setTimeLeft] = useState(time)
+  const { currentReservationStep } = useAppSelector((state) => state.app)
+  const [timeLeft, setTimeLeft] = useState<number>(time)
+  const [isTimeUp, setIsTimeUp] = useState<boolean>(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft((prevTime) => {
-        if (prevTime <= 1) {
+        if (prevTime === 0) {
           // When times reached 0
           clearInterval(interval)
-          timeUp()
+          setIsTimeUp(true)
           return 0
         }
         return prevTime - 1
       })
     }, 1000)
 
-    return () => clearInterval(interval)
-  }, [])
+    if (currentReservationStep !== 2) {
+      clearInterval(interval)
+      setTimeLeft(time)
+      setIsTimeUp(false)
+    }
 
-  const timeUp = () => {}
+    return () => clearInterval(interval)
+  }, [currentReservationStep])
 
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60)
@@ -35,8 +42,17 @@ export default function CountdownTimer({ time = 300 }: CountdownTimerProps) {
 
   return (
     <div>
-      <span>Time Left: </span>
-      <strong>{formatTime(timeLeft)}</strong>
+      {isTimeUp ? (
+        <p className="text-red-400">
+          Time is up. You can continue but the reservation may not be
+          successful.
+        </p>
+      ) : (
+        <>
+          <span>Time Left: </span>
+          <strong>{formatTime(timeLeft)}</strong>
+        </>
+      )}
     </div>
   )
 }
