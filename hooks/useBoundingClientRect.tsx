@@ -19,7 +19,7 @@ const initialValue: Rect = {
 }
 
 export default function useBoundingClientRect<T extends HTMLElement>(
-  ref: React.RefObject<T | null> // Account for `null` in the ref type
+  ref: React.RefObject<T | null>
 ): Rect {
   const [rect, setRect] = useState<Rect>(initialValue)
 
@@ -32,17 +32,12 @@ export default function useBoundingClientRect<T extends HTMLElement>(
       }
     }
 
-    // Initialize rect when component mounts
     updateRect()
 
-    // Add event listeners to update the rect on scroll and resize
     window.addEventListener("scroll", updateRect)
-    window.addEventListener("resize", updateRect)
 
-    // Clean up event listeners when the component unmounts
     return () => {
       window.removeEventListener("scroll", updateRect)
-      window.removeEventListener("resize", updateRect)
     }
   }, [ref])
 
