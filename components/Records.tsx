@@ -1,12 +1,12 @@
 "use client"
 
+import Image from "next/image"
+import CountUp from "react-countup"
+import CoverLayer from "./cover-layer-animation/CoverLayerAnimation"
 import { BiSolidHappy } from "react-icons/bi"
 import { BsFillCartCheckFill } from "react-icons/bs"
 import { MdFoodBank } from "react-icons/md"
-import CountUp from "react-countup"
 import { useInView } from "react-intersection-observer"
-import Image from "next/image"
-import CoverLayer from "./cover-layer-animation/CoverLayerAnimation"
 
 export default function Records() {
   const { ref, inView } = useInView({
@@ -29,8 +29,8 @@ export default function Records() {
       <div className="py-10">
         <Image
           src="/five-star.png"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           alt="five-star"
           className="w-6/12 h-min mx-auto"
         />
@@ -41,7 +41,7 @@ export default function Records() {
             Elegance and Excellence
           </span>
         </h2>
-        <p className="text-center py-6 text-sm sm:text-base">
+        <p className="text-center py-6 px-8 text-sm sm:text-base">
           at Verlio five-star experience isn’t just a promise —
           <span className="text-theme-green-default"> it’s a standard.</span>
         </p>
