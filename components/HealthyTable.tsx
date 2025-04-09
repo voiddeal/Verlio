@@ -11,27 +11,22 @@ export default function HealthyTable() {
   return (
     <div className="w-full sm:flex justify-center bg-black/60 sm:backdrop-blur-sm sm:bg-black/90 relative py-20">
       <div className="flex flex-col w-full h-full sm:w-6/12 px-10 text-white">
-        <h3 className="text-3xl py-4">
+        <h3 className="text-4xl py-4">
           A healthier way now has a seat at the table.
         </h3>
         <div className="py-2">
           <p>
             Freshness, flavor, and care come together at every meal.
             <br />
-            Our commitment to quality means using only the{" "}
-            <span className={attention}>finest</span>, responsibly sourced
-            ingredients, prepared to perfection.
+            Our commitment to quality means using only the finest, responsibly
+            sourced ingredients, prepared to perfection.
             <br />
-            With every bite, you'll taste our{" "}
-            <span className={attention}>dedication</span> to serving wholesome,
+            With every bite, you'll taste our dedication to serving wholesome,
             nourishing dishes
             <br />
             that elevate your dining experience.
             <br />
-            <span>
-              Now, <span className={attention}>healthier</span> choices have a
-              place at every table.
-            </span>
+            <i>Now, healthier choices have a place at every table.</i>
           </p>
           <Link
             href={"/blogs/healthy-table"}
