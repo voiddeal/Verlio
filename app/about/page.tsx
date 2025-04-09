@@ -50,6 +50,8 @@ export default function About() {
             <li>react-redux</li>
             <li>react-icons</li>
             <li>react-countup</li>
+            <li>openlayers</li>
+            <li>lightgallery</li>
           </ul>
         </section>
       </article>
