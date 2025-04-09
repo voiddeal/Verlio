@@ -1,17 +1,18 @@
 import { Meal } from "@/types/api"
 import Image from "next/image"
+import "./style.css"
 
 export default function FrontView({ strMeal, strMealThumb }: Meal) {
   return (
     <div
-      className="relative block w-full h-full rounded-lg cursor-pointer"
+      className="front-view relative block w-full h-full rounded-lg rounded-es-none cursor-pointer"
       title={strMeal}
     >
       <Image
         src={strMealThumb}
         alt={strMeal}
         fill
-        className="rounded-lg object-cover"
+        className="rounded-[inherit] object-cover"
         draggable={false}
         loading="lazy"
       />
