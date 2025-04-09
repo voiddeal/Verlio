@@ -1,11 +1,10 @@
 "use client"
 
-import { useRef } from "react"
-import InfoCards from "../info-cards/InfoCards"
-import Image from "next/image"
-import CTA from "./CTA"
-import useScrollTracker from "@/utils/useScrollTracker"
 import useSmoothAnimation from "@/hooks/useViewportAnimation"
+import useScrollTracker from "@/utils/useScrollTracker"
+import Image from "next/image"
+import { useRef } from "react"
+import CTA from "./CTA"
 
 export default function Hero() {
   const y = useScrollTracker()
@@ -39,15 +38,7 @@ export default function Hero() {
           <span className="text-2xl leading-none capitalize">RESTAURANT</span>
         </h1>
         <CTA />
-        {/* <InfoCards /> */}
       </header>
-      {/* <Image
-        src={"/verlio.png"}
-        width={500}
-        height={500}
-        alt="verlio logo"
-        className="w-32 absolute bottom-0 right-0 m-2"
-      /> */}
     </div>
   )
 }
