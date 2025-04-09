@@ -23,7 +23,7 @@ const images = new Array(20).fill(null).map((_, index) => {
         alt="Gallery Image"
         width={384}
         height={384}
-        className="object-cover object-center hover:scale-105 hover:opacity-95 transition-[transform_opacity] size-full"
+        className="object-cover object-center hover:scale-105 hover:opacity-95 transition-[transform_opacity] size-full outline outline-2 -outline-offset-[12px] outline-white hover:outline-none"
         quality={90}
         loading="lazy"
       />
