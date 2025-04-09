@@ -1,15 +1,12 @@
 import Image from "next/image"
 import errorImage from "@/public/error-image.png"
 import { Meal } from "@/types/api"
-import Link from "next/link"
 
 interface Props {
   meal: Meal
 }
 
 export default function MealPreview({ meal }: Props) {
-  console.log(meal)
-
   if (meal === null) {
     return (
       <div className="w-full flex justify-center border-white border-2">
