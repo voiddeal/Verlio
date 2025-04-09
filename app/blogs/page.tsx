@@ -8,6 +8,7 @@ export default function BlogsPage() {
     const { title, date, by, description, img, href } = blog
     return (
       <Link
+        key={href}
         href={`/blogs/${href}`}
         className="w-full h-80 relative mb-10 border-8 border-theme-green-light rounded-2xl overflow-hidden block"
       >
