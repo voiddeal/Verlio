@@ -9,7 +9,7 @@ import BarLoader from "@/components/loaders/BarLoader"
 const Portal = lazy(
   () =>
     new Promise<{ default: React.ComponentType<any> }>((resolve) => {
-      setTimeout(() => resolve(import("@/components/Portal")), 10000)
+      setTimeout(() => resolve(import("@/components/Portal")), 4000)
     })
 )
 
