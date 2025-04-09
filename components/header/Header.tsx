@@ -1,13 +1,15 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useAppDispatch } from "@/redux/hooks"
+import { appActions } from "@/redux/slices/appSlice"
 import Link from "next/link"
+import { useRef, useState } from "react"
+import { IoCloseOutline, IoMenu } from "react-icons/io5"
 import MenuButton from "./MenuButton"
-import { IoMenu } from "react-icons/io5"
-import { IoCloseOutline } from "react-icons/io5"
 import TopNavBG from "./TopNavBG"
 
 export default function Header() {
+  const dispatch = useAppDispatch()
   const sideNav = useRef<HTMLElement>(null)
   const [sideNavDisplay, setSideNavDisplay] = useState(false)
 
@@ -53,7 +55,7 @@ export default function Header() {
         </div>
         {/* SIDE NAV Links */}
         <ul className="h-full flex flex-col gap-y-4 px-4 py-8 text-2xl font-bold text-primary-default overflow-y-auto">
-          <li className="">
+          <li>
             <Link
               href="/"
               className="block py-2"
@@ -64,16 +66,18 @@ export default function Header() {
           </li>
           <MenuButton closeSideNav={() => setSideNavDisplay(false)} />
 
-          <li className="">
-            <Link
-              href="/"
+          <li>
+            <button
               className="block py-2"
-              onClick={() => setSideNavDisplay(false)}
+              onClick={() => {
+                setSideNavDisplay(false)
+                dispatch(appActions.setLocationModalDisplay(true))
+              }}
             >
               HOURS + LOCATION
-            </Link>
+            </button>
           </li>
-          <li className="">
+          <li>
             <Link
               href="/about"
               className="block py-2"
@@ -82,13 +86,22 @@ export default function Header() {
               ABOUT
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               href="/gallery"
               className="block py-2"
               onClick={() => setSideNavDisplay(false)}
             >
               GALLERY
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/blogs"
+              className="block py-2"
+              onClick={() => setSideNavDisplay(false)}
+            >
+              BLOGS
             </Link>
           </li>
           <li className="mt-auto">
@@ -100,7 +113,7 @@ export default function Header() {
               TAKEOUT
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               href="/reservation"
               className="block py-3 transition-colors bg-theme-green-light hover:bg-theme-green-default text-center"
