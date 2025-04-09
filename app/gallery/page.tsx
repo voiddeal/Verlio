@@ -21,9 +21,10 @@ const images = new Array(20).fill(null).map((_, index) => {
       <Image
         src={`/gallery/gallery-pic-${index + 1}.jpg`}
         alt="Gallery Image"
-        fill
-        className="object-cover object-center hover:scale-105 hover:opacity-95 transition-[transform_opacity]"
-        quality={80}
+        width={384}
+        height={384}
+        className="object-cover object-center hover:scale-105 hover:opacity-95 transition-[transform_opacity] size-full"
+        quality={90}
         loading="lazy"
       />
     </a>
@@ -39,12 +40,14 @@ const Gallery = () => {
           fill
           alt="gallery header image"
           className="object-cover"
+          quality={80}
         />
         <Heading heading="Gallery" />
       </header>
       <LightGallery
         plugins={[lgThumbnail, lgZoom]}
         speed={500}
+        animateThumb={false}
         elementClassNames="relative w-[90%] sm:w-full mx-auto grid [grid-template-columns:repeat(auto-fit,_minmax(384px,_1fr))] place-items-center gap-y-[50px] overflow-hidden my-20"
       >
         {images}
