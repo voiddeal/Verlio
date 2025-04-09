@@ -50,7 +50,6 @@ export default function Blogs() {
         >
           <Image
             src={blogs[0].img}
-            layout="responsive"
             alt="blog preview image"
             width={1000}
             height={1000}
