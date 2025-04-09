@@ -1,19 +1,17 @@
+import Link from "next/link"
+import Image from "next/image"
 import { FaTwitter } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa6"
 import { FaFacebook } from "react-icons/fa6"
-import pepper from "@/public/pepper.png"
-import Link from "next/link"
-import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-stone-900 text-white relative">
+    <footer className="flex flex-col bg-stone-900 text-white relative mb-14">
       {/* top image */}
       <div className="w-full h-20 bg-[url('/linebreak-1.png')] bg-contain bg-center mt-10 mb-5"></div>
       <h4 className="text-3xl text-center mt-10 mb-5">Verlio</h4>
       <p className="text-center w-6/12 m-auto text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        perspiciatis..
+        let’s make every meal extraordinary.
       </p>
       {/* Social Media Links */}
       <div className="flex justify-center items-center my-7 gap-x-4 text-lg">
@@ -31,13 +29,13 @@ export default function Footer() {
         <Link href="#" className="hover:text-theme-default">
           Contact
         </Link>
-        <Link href="#" className="hover:text-theme-default">
+        <a href="/#how-it-works" className="hover:text-theme-default">
           Learn/How-to
-        </Link>
-        <Link href="#" className="hover:text-theme-default">
+        </a>
+        <Link href="/menu" className="hover:text-theme-default">
           Recipes
         </Link>
-        <Link href="#" className="hover:text-theme-default">
+        <Link href="/menu" className="hover:text-theme-default">
           Seasonal Sensations
         </Link>
       </div>
@@ -54,7 +52,7 @@ export default function Footer() {
       </div>
       {/* Pepper Image */}
       <Image
-        src={pepper}
+        src="/pepper.png"
         width={100}
         height={100}
         alt="chili pepper"
