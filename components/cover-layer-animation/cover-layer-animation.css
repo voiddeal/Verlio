@@ -9,6 +9,9 @@ no-follow- a simple one-step sliding cover, revealing the content beneath.
   z-index: 15;
   overflow: hidden;
 }
+.cover-layer-container.hide {
+  animation: hide 0.8s forwards;
+}
 
 .cover-layer {
   width: inherit;
@@ -182,5 +185,16 @@ no-follow- a simple one-step sliding cover, revealing the content beneath.
   100% {
     background-color: transparent;
     display: none;
+  }
+}
+@keyframes hide {
+  0% {
+    z-index: 15;
+  }
+  99% {
+    z-index: 15;
+  }
+  100% {
+    z-index: -10;
   }
 }/*# sourceMappingURL=cover-layer-animation.css.map */

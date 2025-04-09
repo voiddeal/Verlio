@@ -15,6 +15,9 @@ $coverColor: #e2b96b;
   height: 100%;
   z-index: 15;
   overflow: hidden;
+  &.hide {
+    animation: hide $duration-follow forwards;
+  }
 }
 
 .cover-layer {
@@ -197,5 +200,17 @@ $coverColor: #e2b96b;
   100% {
     background-color: transparent;
     display: none;
+  }
+}
+
+@keyframes hide {
+  0% {
+    z-index: 15;
+  }
+  99% {
+    z-index: 15;
+  }
+  100% {
+    z-index: -10;
   }
 }
