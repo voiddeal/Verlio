@@ -1,8 +1,7 @@
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 import { FaTwitter } from "react-icons/fa"
-import { FaInstagram } from "react-icons/fa6"
-import { FaFacebook } from "react-icons/fa6"
+import { FaFacebook, FaInstagram } from "react-icons/fa6"
 
 export default function Footer() {
   return (
@@ -57,6 +56,13 @@ export default function Footer() {
         height={100}
         alt="chili pepper"
         className="absolute -rotate-[90deg] top-[-13%] right-14 scale-y-[-1]"
+      />
+      <Image
+        src={"/verlio.png"}
+        width={500}
+        height={500}
+        alt="verlio logo"
+        className="absolute w-12 sm:w-32 inset-y-0 left-10 sm:left-20 my-auto"
       />
     </footer>
   )
