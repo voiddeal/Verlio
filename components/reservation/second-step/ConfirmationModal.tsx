@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { GoPerson } from "react-icons/go"
@@ -9,6 +10,7 @@ import { appActions } from "@/redux/slices/appSlice"
 
 export default function ConfirmationModal() {
   const dispatch = useAppDispatch()
+  const router = useRouter()
   const { fname, lname, party, email, date, hour, occasion, request, tel } =
     useAppSelector((state) => state.reservationInfo)
 
@@ -62,12 +64,18 @@ export default function ConfirmationModal() {
             </span>
           </div>
         </div>
+        <div>
+          <p className="text-lg pb-4 text-center text-pink-300 ">
+            We are waitng for you! 🥳
+          </p>
+        </div>
       </div>
       <button
         className="text-xl bg-theme-green-dark px-8 py-4 rounded-lg my-4 cursor-pointer"
-        onClick={() =>
+        onClick={() => {
           dispatch(appActions.setReservationConfirmationModalDisplay(false))
-        }
+          router.push("/")
+        }}
       >
         OK
       </button>
