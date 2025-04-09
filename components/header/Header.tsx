@@ -75,7 +75,7 @@ export default function Header() {
           </li>
           <li className="">
             <Link
-              href="/"
+              href="/about"
               className="block py-2"
               onClick={() => setSideNavDisplay(false)}
             >
@@ -84,7 +84,7 @@ export default function Header() {
           </li>
           <li className="">
             <Link
-              href="/"
+              href="/gallery"
               className="block py-2"
               onClick={() => setSideNavDisplay(false)}
             >
@@ -93,7 +93,7 @@ export default function Header() {
           </li>
           <li className="mt-auto">
             <Link
-              href="/"
+              href="/takeout"
               className="block py-3 transition-colors bg-theme-green-light text-primary-default hover:bg-theme-green-default text-center"
               onClick={() => setSideNavDisplay(false)}
             >
