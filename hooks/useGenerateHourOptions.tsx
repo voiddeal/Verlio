@@ -1,22 +1,25 @@
 "use client"
 
-interface useGenerateHourOptionsResults {
-  content: string
-  selected?: boolean
-}
-
 import today from "@/utils/today"
 import { appActions } from "@/redux/slices/appSlice"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 
-export default function useGenerateHourOptions(): useGenerateHourOptionsResults[] {
+interface Results {
+  content: string
+  selected?: boolean
+}
+
+export default function useGenerateHourOptions(): Results[] {
   const dispatch = useAppDispatch()
-  const { hour: hourState } = useAppSelector((state) => state.reservationInfo)
-  const { date } = useAppSelector((state) => state.reservationInfo)
+  const { hour: hourState, date } = useAppSelector(
+    (state) => state.reservationInfo
+  )
+
   const now = new Date(
     new Date().toLocaleString("en-US", { timeZone: "America/Vancouver" })
   )
-  const options: useGenerateHourOptionsResults[] = []
+
+  const options: Results[] = []
   const isToday = date === today() // Check if reservation is for today
   const openHour = 12
   const closeHour = 22
