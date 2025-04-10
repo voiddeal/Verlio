@@ -61,7 +61,8 @@ export default function Chefs() {
 
   return (
     <section className="relative my-10">
-      <CoverLayer to="bottom" />
+      <CoverLayer to="left" />
+      <CoverLayer to="right" />
       <div className="py-10 w-11/12 sm:w-5/6 md:w-2/3 mx-auto">
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6"></div>
         <h4 className="text-3xl text-center my-8">
