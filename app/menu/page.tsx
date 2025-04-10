@@ -18,14 +18,15 @@ export default async function RecipesPage() {
       <Link
         href={`/menu/${strCategory.toLowerCase()}`}
         key={strCategory}
-        className="relative block my-6"
+        className="relative block my-6 h-80"
       >
         <Image
           src={`/menu/${strCategory.toLowerCase()}.jpg`}
-          width={1000}
-          height={1000}
+          fill
+          sizes="(min-width: 640px) 75vw ,(min-width: 768px) 60vw ,(min-width: 1024px) 50vw, 90vw"
+          placeholder="empty"
           alt={`${strCategory} image`}
-          className="rounded-lg"
+          className="rounded-lg object-cover"
         />
         <div className="absolute bottom-0 w-full p-4 text-3xl text-white bg-black/60 backdrop-blur-[2px] rounded-es-lg rounded-ee-lg">
           {strCategory}
@@ -36,7 +37,14 @@ export default async function RecipesPage() {
 
   return (
     <main>
-      <header>
+      <header className="relative">
+        <Image
+          src={"/menu-header.jpg"}
+          fill
+          alt="menu booklet image"
+          className="object-cover"
+        />
+
         <Heading heading="MENUS" />
       </header>
       <section className="w-11/12 sm:w-9/12 md:w-7/12 lg:w-6/12 mx-auto rounded-lg">
