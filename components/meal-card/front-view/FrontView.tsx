@@ -12,6 +12,7 @@ export default function FrontView({ strMeal, strMealThumb }: Meal) {
         src={strMealThumb}
         alt={strMeal}
         fill
+        sizes="(max-width: 640px) 90vw, (min-width: 640px) 75vw"
         className="rounded-[inherit] object-cover"
         draggable={false}
         loading="lazy"
