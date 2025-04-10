@@ -8,12 +8,18 @@ export default function Footer() {
     <footer className="flex flex-col bg-stone-900 text-white relative mb-14">
       {/* top image */}
       <div className="w-full h-20 bg-[url('/linebreak-1.png')] bg-contain bg-center mt-10 mb-5"></div>
-      <h4 className="text-3xl text-center mt-10 mb-5">Verlio</h4>
-      <p className="text-center w-6/12 m-auto text-sm">
-        let’s make every meal extraordinary.
-      </p>
+      <div className="text-center my-5">
+        <h4 className="text-3xl mb-4">Verlio</h4>
+        <i className="w-6/12 m-auto text-sm">
+          let’s make every meal extraordinary.
+        </i>
+      </div>
+      <div className="text-center my-7 ">
+        <span className="block text-sm">Today's hours:</span>
+        <span>12:00 PM - 10:00 PM</span>
+      </div>
       {/* Social Media Links */}
-      <div className="flex justify-center items-center my-7 gap-x-4 text-lg">
+      <div className="flex justify-center items-center mb-7 gap-x-4 text-lg">
         <Link href="#" className="hover:text-blue-400 transition-colors">
           <FaTwitter />
         </Link>
