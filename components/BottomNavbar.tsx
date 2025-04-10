@@ -18,7 +18,7 @@ export default function BottomNavbar() {
   const dispatch = useAppDispatch()
   const { locationModalDisplay } = useAppSelector((state) => state.app)
   const btnClasses =
-    "flex flex-col h-full justify-center items-center gap-y-1 text-sm flex-1 hover:bg-paperHover cursor-pointer"
+    "flex flex-col h-full justify-center items-center gap-y-1 text-sm flex-1 hover:bg-paperHover cursor-pointer text-white"
   const iconSize = 16
 
   const buttons = data.map((entry) => {
