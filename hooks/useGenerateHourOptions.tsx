@@ -18,8 +18,8 @@ export default function useGenerateHourOptions(): useGenerateHourOptionsResults[
   )
   const options: useGenerateHourOptionsResults[] = []
   const isToday = date === today() // Check if reservation is for today
-  const openHour = 12 // Restaurant opens at 12 PM
-  const closeHour = 22 // Restaurant closes at 10 PM
+  const openHour = 12
+  const closeHour = 22
   const intervalMinutes = 30
   const offsetMinutes = 15
 
