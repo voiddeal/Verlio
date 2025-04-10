@@ -18,6 +18,9 @@ export default async function Category({ params }: Props) {
   )
     .then((res) => res.json())
     .then((data) => data)
+    .catch((err) => {
+      throw new Error(err)
+    })
 
   const meals = data.meals
   const mealElements = meals.map((meal) => {

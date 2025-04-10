@@ -6,7 +6,9 @@ import Link from "next/link"
 export default async function RecipesPage() {
   const req = await fetch(
     "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
-  )
+  ).catch((err) => {
+    throw new Error(err)
+  })
   const data: CategoryList = await req.json()
   const categories = data.meals
   const menuItems = categories.map((category) => {
