@@ -7,7 +7,6 @@ import Link from "next/link"
 import { CgArrowLongRight } from "react-icons/cg"
 
 export default function HealthyTable() {
-  const attention = "border-b-2 border-b-theme-green-light"
   return (
     <div className="w-full sm:flex justify-center bg-black/60 sm:backdrop-blur-sm sm:bg-black/90 relative py-20">
       <div className="flex flex-col w-full h-full sm:w-6/12 px-10 text-white">
@@ -25,6 +24,7 @@ export default function HealthyTable() {
             nourishing dishes
             <br />
             that elevate your dining experience.
+            <br />
             <br />
             <i>Now, healthier choices have a place at every table.</i>
           </p>
