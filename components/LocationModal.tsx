@@ -1,13 +1,13 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { IoCloseOutline } from "react-icons/io5"
+import { useAppDispatch } from "@/redux/hooks"
+import { appActions } from "@/redux/slices/appSlice"
 import Map from "ol/Map"
 import View from "ol/View"
 import TileLayer from "ol/layer/Tile"
 import OSM from "ol/source/OSM"
-import { useAppDispatch } from "@/redux/hooks"
-import { appActions } from "@/redux/slices/appSlice"
+import { useEffect, useRef } from "react"
+import { IoCloseOutline } from "react-icons/io5"
 
 export default function LocationModal() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
@@ -70,6 +70,7 @@ export default function LocationModal() {
             onClick={() => dispatch(appActions.setLocationModalDisplay(false))}
           />
         </div>
+        {/* Map */}
         <div
           ref={mapContainerRef}
           className="w-full h-96 border-y-2 border-white"
