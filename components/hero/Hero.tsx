@@ -26,6 +26,7 @@ export default function Hero() {
           alt="hero-image"
           className="grayscale-[30%] object-cover"
           priority
+          placeholder="empty"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent"></div>
