@@ -23,7 +23,7 @@
 /* Custom styles for the dots */
 .custom-dots {
   display: flex !important;
-  justify-content: center; /* Center the dots horizontally */
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;

@@ -4,18 +4,29 @@ import { Meal } from "@/types/api"
 
 export default async function FeaturedMeals() {
   const fetchMeals = async () => {
-    const meals = await Promise.allSettled([
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=53061"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52908"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52964"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52953"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52884"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=53013"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=53076"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52885"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52855"),
-      fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52818"),
-    ])
+    const urls = [
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53061",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52908",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52964",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52953",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52884",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53013",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=53076",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52885",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52855",
+      "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52818",
+    ]
+
+    const meals = await Promise.allSettled(
+      urls.map((url) =>
+        fetch(url).then((response) => {
+          if (!response.ok) {
+            return Promise.reject(new Error(`HTTP error ${response.status}`))
+          }
+          return response
+        })
+      )
+    )
 
     const mealData = await Promise.all(
       meals.map(async (result, index) => {
@@ -23,6 +34,10 @@ export default async function FeaturedMeals() {
           return result.value
             .json()
             .then((data) => {
+              if (!data.meals || data.meals.length === 0) {
+                console.warn(`No meal data available for meal ${index + 1}`)
+                return null
+              }
               return data.meals[0]
             })
             .catch((jsonError) => {
@@ -38,7 +53,8 @@ export default async function FeaturedMeals() {
         }
       })
     )
-    return mealData
+
+    return mealData.filter((meal) => meal !== null)
   }
 
   const data: Meal[] = await fetchMeals()
