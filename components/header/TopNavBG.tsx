@@ -1,4 +1,4 @@
-import useScrollTracker from "@/utils/useScrollTracker"
+import useScrollTracker from "@/hooks/useScrollTracker"
 import Link from "next/link"
 
 export default function TopNavBG() {

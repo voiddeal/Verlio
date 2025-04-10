@@ -1,7 +1,7 @@
 "use client"
 
 import useSmoothAnimation from "@/hooks/useViewportAnimation"
-import useScrollTracker from "@/utils/useScrollTracker"
+import useScrollTracker from "@/hooks/useScrollTracker"
 import Image from "next/image"
 import { useRef } from "react"
 import CTA from "./CTA"
