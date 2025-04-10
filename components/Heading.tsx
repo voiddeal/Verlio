@@ -33,7 +33,7 @@ export default function Heading({ heading }: Props) {
   return (
     <div
       ref={containerRef}
-      className="relative h-[40dvh] flex items-center justify-center overflow-hidden bg-paper/70"
+      className="relative h-[50dvh] flex items-center justify-center overflow-hidden bg-paper/70"
       onMouseMove={handleMouseMove}
     >
       <h1
