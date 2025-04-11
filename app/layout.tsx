@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import AppProviders from "@/providers/AppProviders"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
           {children}
           {footer}
           {bottomNavbar}
+          <Analytics />
         </AppProviders>
       </body>
     </html>
