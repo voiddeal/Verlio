@@ -41,8 +41,8 @@ export default function Vibe() {
             dishes, every detail delights.
           </p>
           <p className="text-gray-600">
-            Whether you're here for a celebration or a quiet escape, this is a
-            place to savor moments that matter.
+            Whether you&#39;re here for a celebration or a quiet escape, this is
+            a place to savor moments that matter.
           </p>
           <Link
             href={"/gallery"}

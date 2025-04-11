@@ -1,7 +1,7 @@
 import Vibe from "./Vibe"
 import Taste from "./Taste"
-import Carrot from "./Carrot"
 import Records from "../Records"
+// import Carrot from "./Carrot"
 
 export default function Experience() {
   return (

@@ -97,7 +97,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
     }
 
     fetchData()
-  }, [isFlipped])
+  }, [isFlipped, idMeal])
 
   return (
     <div

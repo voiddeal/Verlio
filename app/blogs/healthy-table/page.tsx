@@ -29,12 +29,12 @@ export default function HealthyTableBlogPost() {
             In a world where dining often prioritizes speed over nutrition,
             Verlio stands out as a beacon of health-conscious eating. Every meal
             we serve is a testament to our commitment to using the freshest,
-            most responsibly sourced ingredients to craft dishes that don't just
-            fill your plate—they nourish your body and soul.
+            most responsibly sourced ingredients to craft dishes that don&#39;t
+            just fill your plate—they nourish your body and soul.
           </p>
           <h2 className="text-2xl font-semibold mb-4">Our Philosophy</h2>
           <p className="mb-6">
-            At Verlio, we believe that food is more than fuel—it's an
+            At Verlio, we believe that food is more than fuel—it&#39;s an
             experience. From the moment ingredients are carefully selected, to
             the last touch of seasoning on your plate, every detail is infused
             with care. Our chefs strive to create dishes that strike the perfect

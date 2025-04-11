@@ -50,12 +50,12 @@ export default function BlogsPage() {
           </p>
           <br />
           <p>
-            Here, you'll find recipes that aren't just instructions—they're
-            stories.
+            Here, you&#39;ll find recipes that aren&#39;t just
+            instructions—they&#39;re stories.
             <br />
             Each dish is lovingly crafted and shared by home cooks, aspiring
-            chefs, and culinary dreamers. Whether it's a classic family recipe
-            passed down through generations, a creative twist on an old
+            chefs, and culinary dreamers. Whether it&#39;s a classic family
+            recipe passed down through generations, a creative twist on an old
             favorite, or a daring experiment that turned out beautifully.
           </p>
           <br />

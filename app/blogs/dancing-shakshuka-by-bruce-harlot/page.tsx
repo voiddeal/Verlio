@@ -36,11 +36,11 @@ export default function DancingShakshukaByBruceHarlotPage() {
             className="object-cover -z-20"
           />
           <p className="text-white text-center text-lg">
-            ’’Shakshuka is more than just a dish; it's an invitation to savor
-            the beauty of simplicity. Originating from North Africa and the
-            Middle East, this hearty one-pan delight brings together the bold
-            flavors of tomatoes, peppers, and aromatic spices, crowned with
-            perfectly poached eggs. Whether you're serving it for breakfast,
+            ’’Shakshuka is more than just a dish; it&#39;s an invitation to
+            savor the beauty of simplicity. Originating from North Africa and
+            the Middle East, this hearty one-pan delight brings together the
+            bold flavors of tomatoes, peppers, and aromatic spices, crowned with
+            perfectly poached eggs. Whether you&#39;re serving it for breakfast,
             lunch, or dinner, Shakshuka is a celebration of warmth, comfort, and
             a symphony of vibrant colors.’’
             <br />
@@ -55,7 +55,7 @@ export default function DancingShakshukaByBruceHarlotPage() {
           </header>
           <p>
             The essence of Shakshuka lies in fresh, simple ingredients that come
-            alive when combined. Here's what you'll need:
+            alive when combined. Here&#39;s what you&#39;ll need:
           </p>
           <ul>
             <li>
@@ -77,7 +77,7 @@ export default function DancingShakshukaByBruceHarlotPage() {
               Onions and Garlic
               <p>
                 : Finely chopped onions and crushed garlic form the aromatic
-                backbone of Shakshuka's sauce.
+                backbone of Shakshuka&#39;s sauce.
               </p>
             </li>
             <li>
@@ -119,7 +119,7 @@ export default function DancingShakshukaByBruceHarlotPage() {
             </header>
             <p>
               Creating Shakshuka is a joyful experience, combining simplicity
-              with bold flavors. Here's how you can bring it to life:
+              with bold flavors. Here&#39;s how you can bring it to life:
             </p>
           </div>
           <div>

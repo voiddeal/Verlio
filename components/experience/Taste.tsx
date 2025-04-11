@@ -41,8 +41,8 @@ export default function Taste() {
             bold flavors to life.
           </p>
           <p className="text-gray-600">
-            Whether you're exploring our menu or savoring your favorites, each
-            bite is unforgettable.
+            Whether you&#39;re exploring our menu or savoring your favorites,
+            each bite is unforgettable.
           </p>
           <Link
             href={"/menu"}

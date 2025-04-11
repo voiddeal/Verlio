@@ -1,11 +1,7 @@
 "use client"
 
+import { PortalProps } from "@/types/models"
 import ReactDOM from "react-dom"
-
-interface PortalProps {
-  children: React.ReactNode
-  containerId?: string // optional ID for the container element
-}
 
 const Portal: React.FC<PortalProps> = ({ children, containerId }) => {
   const containerElement = containerId

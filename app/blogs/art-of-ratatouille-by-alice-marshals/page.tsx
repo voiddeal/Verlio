@@ -16,7 +16,7 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
       </header>
       <article className="blog-article w-[90%] sm:w-[75%] lg:w-[65%] mx-auto">
         <header>
-          <h2>Mastering the Art of Ratatouille: A Chef's Guide</h2>
+          <h2>Mastering the Art of Ratatouille: A Chef&#39;s Guide</h2>
           <div className="flex flex-col text-black">
             <small className="">May 7 2024</small>
             <small>
@@ -36,11 +36,11 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
             className="object-cover -z-20 object-top"
           />
           <p className="text-white text-center text-lg">
-            ’’Ratatouille is more than just a recipe; it's an act of culinary
-            love. To craft the perfect ratatouille, you must respect its
-            simplicity while unlocking its potential with thoughtful choices and
-            techniques. Here’s a deep dive into creating this rustic French
-            dish, complete with tricks to elevate it.’’
+            ’’Ratatouille is more than just a recipe; it&#39;s an act of
+            culinary love. To craft the perfect ratatouille, you must respect
+            its simplicity while unlocking its potential with thoughtful choices
+            and techniques. Here&#39;s a deep dive into creating this rustic
+            French dish, complete with tricks to elevate it.’’
             <br />
             —Mia Wazeer
           </p>
@@ -54,7 +54,7 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
           <p>
             The magic of ratatouille lies in its vegetables and herbs. Using
             fresh, high-quality ingredients will take your dish from good to
-            extraordinary. Here's what you'll need:
+            extraordinary. Here&#39;s what you&#39;ll need:
           </p>
           <ul>
             <li>
@@ -126,8 +126,8 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
               <h3>The Cooking Process</h3>
             </header>
             <p>
-              Ratatouille rewards patience and careful layering. Here's how you
-              can make it special:
+              Ratatouille rewards patience and careful layering. Here&#39;s how
+              you can make it special:
             </p>
           </div>
           <div>
@@ -143,9 +143,9 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
             <h4>Step 2: Build a Flavorful Base</h4>
             <p>
               Start with a generous swirl of olive oil in a pan over medium
-              heat. Sauté the onions until they’re golden and translucent, then
-              add minced garlic. Cooking garlic until fragrant sets the stage
-              for bold flavors.
+              heat. Sauté the onions until they&#39;re golden and translucent,
+              then add minced garlic. Cooking garlic until fragrant sets the
+              stage for bold flavors.
             </p>
           </div>
           <div>
@@ -221,7 +221,7 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
             <li>
               Layer Herbs and Spices:{" "}
               <p>
-                Don’t just throw herbs on top. Layer them as you add the
+                Don&#39;t just throw herbs on top. Layer them as you add the
                 vegetables to infuse flavor throughout the dish.
               </p>
             </li>
@@ -282,15 +282,15 @@ export default function ArtOfRatatouilleByAliceMarshalsPage() {
             Making ratatouille is a labor of love that celebrates simple
             ingredients. The key lies in treating each vegetable with care,
             layering flavors thoughtfully, and embracing the slow cooking
-            process. When done right, ratatouille isn’t just a dish—it’s a
-            masterpiece of flavors and textures, warming both the heart and
+            process. When done right, ratatouille isn&#39;t just a dish—it&#39;s
+            a masterpiece of flavors and textures, warming both the heart and
             soul.
           </p>
           <p>
             So gather your ingredients, roll up your sleeves, and create your
-            own culinary masterpiece. With a bit of patience and passion, you'll
-            have a ratatouille that’s as comforting as it is unforgettable.
-            Happy cooking! 🌟
+            own culinary masterpiece. With a bit of patience and passion,
+            you&#39;ll have a ratatouille that&#39;s as comforting as it is
+            unforgettable. Happy cooking! 🌟
           </p>
         </section>
         <div className="w-10/12 mx-auto bg-[url('/linebreak-2.png')] bg-contain bg-center bg-no-repeat h-6 mb-10"></div>

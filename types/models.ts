@@ -22,3 +22,8 @@ export interface ReservationInfo {
     | "special-occasion"
     | "business-meal"
 }
+
+export interface PortalProps {
+  children: React.ReactNode
+  containerId?: string // optional ID for the container element
+}

@@ -1,14 +1,15 @@
 "use client"
 
+import BarLoader from "@/components/loaders/BarLoader"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { appActions } from "@/redux/slices/appSlice"
-import ConfirmationModal from "../ConfirmationModal"
+import type { PortalProps } from "@/types/models"
 import { lazy, Suspense } from "react"
-import BarLoader from "@/components/loaders/BarLoader"
+import ConfirmationModal from "../ConfirmationModal"
 
 const Portal = lazy(
   () =>
-    new Promise<{ default: React.ComponentType<any> }>((resolve) => {
+    new Promise<{ default: React.ComponentType<PortalProps> }>((resolve) => {
       setTimeout(() => resolve(import("@/components/Portal")), 4000)
     })
 )
@@ -19,7 +20,7 @@ export default function SubmitButton() {
     (state) => state.app
   )
 
-  const sumbitHandler = (e: React.FormEvent<HTMLButtonElement>) => {
+  const sumbitHandler = () => {
     const formElement = document.getElementById(
       "reservation-form"
     ) as HTMLFormElement

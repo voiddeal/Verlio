@@ -59,7 +59,7 @@ export default async function FeaturedMeals() {
 
   const data: Meal[] = await fetchMeals()
   const meals = data.map((meal) => {
-    return <MealPreview meal={meal} />
+    return <MealPreview key={meal.idMeal} meal={meal} />
   })
 
   return (

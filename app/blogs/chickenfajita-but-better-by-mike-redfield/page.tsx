@@ -36,12 +36,12 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
             className="object-cover -z-20 object-top"
           />
           <p className="text-white text-center text-lg">
-            ’’ Chicken Fajitas are more than just a meal—they’re a culinary
+            ’’Chicken Fajitas are more than just a meal—they&#39;re a culinary
             celebration! 🌟 With sizzling chicken, vibrant peppers, and warm
             tortillas, this Tex-Mex classic is all about bold flavors and hearty
-            satisfaction. Whether it's a casual dinner or a party centerpiece,
-            fajitas bring the heat and the fun. Here’s how you can master this
-            sizzling sensation at home.’’
+            satisfaction. Whether it&#39;s a casual dinner or a party
+            centerpiece, fajitas bring the heat and the fun. Here&#39;s how you
+            can master this sizzling sensation at home.’’
             <br />
             —Mike Redfield
           </p>
@@ -54,7 +54,7 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
           </header>
           <p>
             Fresh, flavorful ingredients are the secret to unforgettable
-            fajitas. Here’s what you’ll need to get started:
+            fajitas. Here&#39;s what you&#39;ll need to get started:
           </p>
           <ul>
             <li>
@@ -117,7 +117,7 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
             </header>
             <p>
               Chicken Fajitas are all about simplicity and bold, fresh flavors.
-              Here’s how to prepare them to perfection:
+              Here&#39;s how to prepare them to perfection:
             </p>
           </div>
           <div>
@@ -132,8 +132,8 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
             <h4>Step 2: Sear the Chicken</h4>
             <p>
               Heat a skillet or grill pan over high heat. Cook the chicken until
-              it’s golden brown and fully cooked. Let it rest for a few minutes
-              before slicing into thin strips.
+              it&#39;s golden brown and fully cooked. Let it rest for a few
+              minutes before slicing into thin strips.
             </p>
           </div>
           <div>
@@ -166,7 +166,7 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
               </p>
             </li>
             <li>
-              Don’t Overcrowd
+              Don&#39;t Overcrowd
               <p>
                 : Cook the chicken and vegetables in batches to ensure proper
                 caramelization.
@@ -214,7 +214,7 @@ export default function ChickenFajitaButBetterByMikeRedfieldPage() {
             Chicken Fajitas bring the excitement of sizzling, flavorful food
             right to your table. With bold spices, colorful veggies, and your
             choice of toppings, this dish is as versatile as it is delicious.
-            Whether it’s for a family dinner or a gathering with friends,
+            Whether it&#39;s for a family dinner or a gathering with friends,
             fajitas are always a crowd-pleaser. 🎉
           </p>
           <p>Happy cooking and enjoy the fiesta! 🌮🔥</p>

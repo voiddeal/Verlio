@@ -32,7 +32,7 @@ export default function CountdownTimer({ time = 300 }: CountdownTimerProps) {
     }
 
     return () => clearInterval(interval)
-  }, [currentReservationStep])
+  }, [currentReservationStep, time])
 
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60)

@@ -20,8 +20,8 @@ export default function HealthyTable() {
             Our commitment to quality means using only the finest, responsibly
             sourced ingredients, prepared to perfection.
             <br />
-            With every bite, you'll taste our dedication to serving wholesome,
-            nourishing dishes
+            With every bite, you&#39;ll taste our dedication to serving
+            wholesome, nourishing dishes
             <br />
             that elevate your dining experience.
             <br />

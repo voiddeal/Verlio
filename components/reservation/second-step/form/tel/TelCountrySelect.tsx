@@ -1,6 +1,7 @@
 "use client"
 
 import { Country } from "@/types/api"
+import Image from "next/image"
 import { useState } from "react"
 
 interface Props {
@@ -25,9 +26,11 @@ export default function TelCountrySelect({ countries }: Props) {
 
   return (
     <div className="flex bg-white border cursor-pointer relative">
-      <img
+      <Image
         src={image}
-        alt="flag"
+        width={32}
+        height={32}
+        alt="country flag"
         className="w-8 cursor absolute inset-y-0 left-2 m-auto"
       />
       <select

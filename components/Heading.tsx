@@ -24,11 +24,11 @@ export default function Heading({ heading }: Props) {
     }
   }
 
-  const handleMouseLeave = () => {
-    if (headingRef.current) {
-      headingRef.current.style.transform = "translate(0px, 0px)" // Reset position
-    }
-  }
+  // const handleMouseLeave = () => {
+  //   if (headingRef.current) {
+  //     headingRef.current.style.transform = "translate(0px, 0px)" // Reset position
+  //   }
+  // }
 
   return (
     <div

@@ -15,7 +15,7 @@ export default function Footer() {
         </i>
       </div>
       <div className="text-center my-7 ">
-        <span className="block text-sm">Today's hours:</span>
+        <span className="block text-sm">Today&#39;s hours:</span>
         <span>12:00 PM - 10:00 PM</span>
       </div>
       {/* Social Media Links */}
@@ -34,7 +34,7 @@ export default function Footer() {
         <Link href="#" className="hover:text-theme-default">
           Contact
         </Link>
-        <a href="/#how-it-works" className="hover:text-theme-default">
+        <a href="#how-it-works" className="hover:text-theme-default">
           Learn/How-to
         </a>
         <Link href="/menu" className="hover:text-theme-default">
