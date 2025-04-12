@@ -1,6 +1,6 @@
 import FlipCard from "@/components/flip-card/FlipCard"
 import Heading from "@/components/Heading"
-import BackView from "@/components/meal-card/BackView"
+import BackView from "@/components/meal-card/back-view/BackView"
 import FrontView from "@/components/meal-card/front-view/FrontView"
 import type { MealList } from "@/types/api"
 import { CgArrowLongRight } from "react-icons/cg"

@@ -3,9 +3,10 @@
 import Image from "next/image"
 import { MealDetail, Meal } from "@/types/api"
 import { useContext, useEffect, useRef, useState } from "react"
-import { FlipContext } from "../flip-card/FlipCard"
+import { FlipContext } from "../../flip-card/FlipCard"
 import { MdOutlineSource } from "react-icons/md"
 import { FaYoutube } from "react-icons/fa6"
+import "./style.css"
 
 export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
   const { isFlipped } = useContext(FlipContext)
@@ -50,7 +51,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
 
       return (
         <div className="relative w-full h-full text-white flex flex-col ">
-          <div className="p-2 text-lg border-b-2 flex justify-between items-center">
+          <div className="p-2 text-lg border-b-2 flex justify-end items-center gap-x-5">
             <div>origin: {strArea}</div>
             <div className="flex gap-x-2">
               <a
@@ -73,7 +74,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
           </div>
           <div className="p-2 overflow-y-auto">
             <span>Ingrediants:</span>
-            <div className="inline px-2 ">{ingredients}</div>
+            <div className="inline px-2">{ingredients}</div>
           </div>
         </div>
       )
@@ -102,7 +103,7 @@ export default function BackView({ idMeal, strMeal, strMealThumb }: Meal) {
   return (
     <div
       ref={back}
-      className="relative w-full h-full block rounded-lg cursor-pointer"
+      className="back-view relative w-full h-full block rounded-lg cursor-pointer"
     >
       <Image
         src={strMealThumb}

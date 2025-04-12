@@ -17,7 +17,7 @@ export default function FrontView({ strMeal, strMealThumb }: Meal) {
         draggable={false}
         loading="lazy"
       />
-      <div className="absolute top-0 w-full p-2 text-lg text-white bg-black/60 backdrop-blur-[2px] rounded-ss-[inherit] rounded-se-[inherit] whitespace-nowrap text-ellipsis overflow-hidden">
+      <div className="absolute top-0 w-full p-2 text-lg text-white bg-black/60 backdrop-blur-[2px] rounded-ss-[inherit] rounded-se-[inherit] whitespace-nowrap text-ellipsis text-end overflow-hidden">
         {strMeal}
       </div>
     </div>
