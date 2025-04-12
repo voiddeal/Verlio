@@ -1,11 +1,5 @@
 # Verlio
 
-## Header
-
-**Verlio**
-
----
-
 <div style="text-align: left; margin-left: auto; display: flex; gap: 1rem; align-items: center; padding-top: 2rem;">
 
 [لینک نسخه دپلوی شده](https://verlio.vercel.app/)
