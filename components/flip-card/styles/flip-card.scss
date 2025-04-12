@@ -33,6 +33,7 @@ $bounce-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 100%;
   position: absolute;
   transform: translateZ(-2px) rotateX(180deg);
+  backface-visibility: hidden;
 }
 
 .face[data-direction="left"] .back,
