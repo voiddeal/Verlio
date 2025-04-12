@@ -24,6 +24,10 @@ const images = new Array(20).fill(null).map((_, index) => {
         width={384}
         height={384}
         className="object-cover object-center hover:scale-105 hover:opacity-95 transition-[transform_opacity] size-full outline outline-2 -outline-offset-[12px] outline-white hover:outline-none"
+        style={{
+          clipPath:
+            "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)",
+        }}
         quality={90}
         loading="lazy"
       />
