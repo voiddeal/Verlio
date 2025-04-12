@@ -16,7 +16,7 @@ export default function ReservationsPage() {
         />
         <Heading heading="Reservation at Verlio" />
       </header>
-      <section className="pb-16 px-4 bg-black bg-opacity-5">
+      <section className="pb-16 px-4">
         <FirstStep />
         <SecondStep />
       </section>
