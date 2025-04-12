@@ -8,7 +8,11 @@ export default function About() {
         <Heading heading="Verlio" />
       </header>
       <div className="ml-auto w-fit px-4 pt-8 flex gap-x-4 items-center">
-        <a href="" className="">
+        <a
+          href="https://verlio.vercel.app"
+          target="_blank"
+          className="self-end underline hover:text-blue-500"
+        >
           لینک نسخه دپلوی شده
         </a>
         <a href="https://github.com/voiddeal/Verlio" target="_blank">

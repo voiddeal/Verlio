@@ -11,7 +11,7 @@ import TopNavBG from "./TopNavBG"
 export default function Header() {
   const dispatch = useAppDispatch()
   const sideNav = useRef<HTMLElement>(null)
-  const [sideNavDisplay, setSideNavDisplay] = useState(true)
+  const [sideNavDisplay, setSideNavDisplay] = useState(false)
 
   const sideNavFocusOutHandler = (
     event: React.FocusEvent<HTMLElement, Element>
