@@ -18,11 +18,12 @@ export default function BottomNavbar() {
   const dispatch = useAppDispatch()
   const { locationModalDisplay } = useAppSelector((state) => state.app)
   const btnClasses =
-    "flex flex-col h-full justify-center items-center gap-y-1 text-sm flex-1 hover:bg-paperHover cursor-pointer text-white"
+    "flex flex-col size-full justify-center items-center gap-y-1 text-sm flex-1 hover:bg-paperHover cursor-pointer text-white disabled:cursor-not-allowed disabled:text-[#6d6d6d] disabled:bg-[#d3aa5f]"
   const iconSize = 16
 
   const buttons = data.map((entry) => {
     const { name, href } = entry
+    const isOrder = name === "Order"
     const lowerCaseName = name.toLowerCase()
     const icon = () => {
       switch (lowerCaseName) {
@@ -36,9 +37,11 @@ export default function BottomNavbar() {
     }
 
     return (
-      <Link key={name} className={btnClasses} href={href}>
-        {icon()}
-        {name}
+      <Link key={name} href={href} className="flex-1 h-full">
+        <button type="button" className={btnClasses} disabled={isOrder}>
+          {icon()}
+          {name}
+        </button>
       </Link>
     )
   })

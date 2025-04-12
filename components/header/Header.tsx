@@ -11,7 +11,7 @@ import TopNavBG from "./TopNavBG"
 export default function Header() {
   const dispatch = useAppDispatch()
   const sideNav = useRef<HTMLElement>(null)
-  const [sideNavDisplay, setSideNavDisplay] = useState(false)
+  const [sideNavDisplay, setSideNavDisplay] = useState(true)
 
   const sideNavFocusOutHandler = (
     event: React.FocusEvent<HTMLElement, Element>
@@ -104,15 +104,6 @@ export default function Header() {
               BLOGS
             </Link>
           </li>
-          <li className="mt-auto">
-            <Link
-              href="/takeout"
-              className="block py-3 transition-colors bg-theme-green-light text-primary-default hover:bg-theme-green-default text-center"
-              onClick={() => setSideNavDisplay(false)}
-            >
-              TAKEOUT
-            </Link>
-          </li>
           <li>
             <Link
               href="/reservation"
@@ -121,6 +112,9 @@ export default function Header() {
             >
               RESERVE
             </Link>
+          </li>
+          <li className="mt-auto block py-3 bg-theme-green-dark/40 text-primary-light text-center cursor-not-allowed">
+            TAKEOUT
           </li>
         </ul>
       </nav>
