@@ -66,7 +66,7 @@ export default function ConfirmationModal() {
         </div>
         <div>
           <p className="text-lg pb-4 text-center text-pink-300 ">
-            We are waitng for you! 🥳 <small>(not really)</small>
+            We are waitng for you! 🥳
           </p>
         </div>
       </div>
